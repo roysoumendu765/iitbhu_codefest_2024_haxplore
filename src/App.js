@@ -7,11 +7,22 @@ import Counter from './components/Counter';
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Main/>
-      <FormSection />
-      <Counter/>
-      <Footer/>
+      <div className="header">
+        <Header />
+      </div>
+      <div className="main">
+        <Main />
+      </div>
+      <div className="form">
+        <FormSection />
+      </div>
+      <div className="counter">
+        <Counter />
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
+
     </div>
   );
 }

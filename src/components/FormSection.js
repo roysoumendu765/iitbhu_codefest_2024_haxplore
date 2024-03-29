@@ -63,7 +63,7 @@ export default function FormSection() {
         .catch(err => console.log(err))
     }
     return (
-        <div>
+        <div className="formContainer">
             <fieldset>
                 <legend>Personal Details</legend>
                 <form className="form-section">
