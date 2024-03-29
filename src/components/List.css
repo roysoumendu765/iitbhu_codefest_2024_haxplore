@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 
+.wrapper{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
 .ticketmain{
     display: flex;
     padding: 10px;
@@ -34,7 +40,13 @@
     font-weight: 700;
     font-style: italic;
   }
+  .graduate-regular {
+    font-family: "Graduate", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
   .qrcode-img{
+    margin-left: 10px;
     border: 5px solid white;
   }
   h1.ticket-heading {
