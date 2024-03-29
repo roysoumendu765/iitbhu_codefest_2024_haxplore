@@ -1,5 +1,28 @@
+.ticketpage {
+    border: 1px solid red;
 
+}
 
+.container {
+    /* width: 100%; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.clichere{
+    font-size: 2rem;
+}
+.click{
+    padding: 1rem;
+    border: 2px solid orange;
+    border-radius: 3rem;
+    box-shadow: 0 0 3px 3px rgb(234, 100, 18);
+    margin-top: 2rem;
+    font-size: 2rem;
+}
 
 
 
