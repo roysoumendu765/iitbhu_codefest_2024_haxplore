@@ -27,7 +27,7 @@ const Counter = () => {
       if (currentVisitorCount > 200 && currentTempleCount > 200) {
         clearInterval(interval);
       }
-    }, 50); // Update every 100 milliseconds
+    }, 10); // Update every 100 milliseconds
 
     // Clean up interval on component unmount
     return () => clearInterval(interval);
