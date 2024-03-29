@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 
 const Model = require('../models/models');
+const PaymentModel = require('../models/paymentmodels');
 
 router.post('/book', async (req, res) => {
     console.log(req.body)
@@ -30,6 +31,23 @@ router.get('/getData/:idnum', async (req,res) => {
         res.status(200).json(data)
     } catch (error) {
         res.status(500).json({message: error.message});
+    }
+})
+
+router.post('/payment', async (req,res) => {
+    try{
+        console.log(req.body);
+        const paydata = new PaymentModel(
+            {
+                userid: req.body.userid,
+                razorid: req.body.razorid,
+                amount: parseInt(req.body.amount)
+            }
+        )
+        const paymentSaved = await paydata.save();
+        res.status(200).json({message: `Payment Successful`})
+    } catch(error){
+        res.status(500).json({message: `Payment Failed: ${error.message}`})
     }
 })
 
