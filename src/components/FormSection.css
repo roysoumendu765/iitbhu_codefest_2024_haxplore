@@ -1,0 +1,122 @@
+.formContainer {
+  /* height: 55vh; */
+  /* width: 45wh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  /* margin-top: 10rem; */
+}
+.form-section {
+  border: 2px solid black;
+  /* height: rem; */
+  padding: 1rem;
+}
+.form-section label {
+  margin-left: 10rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.form-section input {
+  height: 3rem;
+  width: 25rem;
+}
+.nameInput {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 17rem;
+  padding-left: 10px;
+  margin-top: 1rem;
+}
+.genderInput {
+  font-size: 10px;
+}
+.ageInput {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 19rem;
+  padding-left: 10px;
+  margin-top: 1rem;
+}
+.mobileInput {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 16.2rem;
+  margin-top: 1rem;
+  padding-left: 10px;
+}
+.idInput {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 14.8rem;
+  padding-left: 10px;
+}
+.idnumber-input {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 12.6rem;
+  padding-left: 10px;
+}
+.numberofperson-input {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 4.7rem;
+  padding-left: 10px;
+}
+.emailInput {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 10.4rem;
+  padding-left: 10px;
+}
+.btn {
+    margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap:20rem;
+}
+.submitbtn {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 5px;
+}
+.Resetbtn {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  border-radius: 5px;
+}
+
+.submitbtn,
+.Resetbtn {
+  font-size: 1.1rem;
+  line-height: 2;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(to bottom right, #777, #ddd);
+  box-shadow: 1px 1px 1px black, inset 2px 3px 5px rgb(0 0 0 / 30%),
+    inset -2px -3px 5px rgb(255 255 255 / 50%);
+}
+
+.submitbtn:focus,
+.Resetbtn:hover {
+  background-image: linear-gradient(to bottom right, #888, #eee);
+}
+
+.submitbtn:active {
+  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgb(0 0 0 / 30%),
+    inset -2px -3px 5px rgb(255 255 255 / 50%);
+}
+.Resetbtn:active {
+  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgb(0 0 0 / 30%),
+    inset -2px -3px 5px rgb(255 255 255 / 50%);
+}

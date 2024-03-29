@@ -1,19 +1,30 @@
 import './App.css';
-import Main from './components/Main';
-import Header from './components/Header';
+// import MainApp from './components';
+import MainApp from './components/MainApp';
+import { Route, Routes } from 'react-router-dom';
+import FormSection from "./components/FormSection";
 import Footer from './components/Footer';
-import FormSection from './components/FormSection';
-import Counter from './components/Counter';
+import Header from './components/Header';
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Main/>
-      <FormSection />
-      <Counter/>
-      <Footer/>
+    <div>
+      <div className="header">
+        <Header />
+      </div>
+
+      <Routes>
+        <Route path="/" element={<MainApp />} />
+        <Route path='/buy' element={<FormSection />} />
+      </Routes>
+      <div>
+        <Footer/>
+      </div>
     </div>
+
+
   );
 }
-
+<div className="form">
+  <FormSection />
+</div>
 export default App;
