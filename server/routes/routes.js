@@ -39,8 +39,8 @@ router.post('/payment', async (req,res) => {
         console.log(req.body);
         const paydata = new PaymentModel(
             {
-                userid: req.body.userid,
-                razorid: req.body.razorid,
+                userid: req.body.user_id,
+                razorid: req.body.rzr_pay_id,
                 amount: parseInt(req.body.amount)
             }
         )

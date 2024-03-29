@@ -13,7 +13,7 @@ const Main = () => {
                 <div className="counter">
                     <Counter />
                 </div>
-                <div className='col-12 ticketpage'>
+                <div className='ticketpage'>
                     <Ticketpage />
                 </div>
         </div>
