@@ -2,21 +2,20 @@ import { CgMail } from "react-icons/cg";
 import { IoMdContact } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { TiMessages } from "react-icons/ti";
-
-// import bhulogo from "./assests/bhulogo.png";
+import bhulogo from "./assests/bhulogo.png"
 
 import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
   return (
-    <div>
+    <div className="Footer-Container  max-width">
       <div>
 
         {/* main title and logo */}
 
         <div>
-          {/* <img src={bhulogo}></img> */}
+          <img src={bhulogo} alt ="logo"/>
           <h2>Footer Temple</h2>
         </div>
 
