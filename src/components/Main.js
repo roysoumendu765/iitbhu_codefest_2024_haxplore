@@ -6,9 +6,9 @@ const Main = () => {
   return (
     <div class="row">
       <div class="col-12 carousel">
-        <ControlledCarousel/>
+    
       </div>
-      <div class="col-12 counterdiv">
+      <div className="col-12 counterdiv">
             <Counter/>
       </div>
     </div>
