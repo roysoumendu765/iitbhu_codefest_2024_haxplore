@@ -1,20 +1,20 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 
 export default function FormSection() {
-    
+
     const [username, setName] = useState('');
     const [gender, setGender] = useState('');
-    const [age, setAge] = useState(0);
+    const [age, setAge] = useState('');
     const [email, setEmail] = useState('');
-    const [mobilenum, setMobileNum] = useState(0);
+    const [mobilenum, setMobileNum] = useState('');
     const [idname, setIdname] = useState('');
     const [idnum, setIdNum] = useState('');
-    const [noOfPersons, setNoOfPersons] = useState(0);
+    const [noOfPersons, setNoOfPersons] = useState('');
 
     const handlename = (e) => {
-        setName(e.target.value);
+        setName(e.target.value)
     }
 
     const handlegender = (e) => {
@@ -22,7 +22,13 @@ export default function FormSection() {
     }
 
     const handleAge = (e) => {
-        setAge(e.target.value);
+        let val = e.target.value;
+        if (val > 100) {
+            e.target.value = val.slice(0, 2);
+            setAge(val.slice(0, 2));
+        } else {
+            setAge(val);
+        }
     }
 
     const handleEmail = (e) => {
@@ -30,7 +36,13 @@ export default function FormSection() {
     }
 
     const handleMobile = (e) => {
-        setMobileNum(e.target.value);
+        let val = e.target.value;
+        if(val <= 9999999999 ){
+            setMobileNum(val);
+        }else{
+            e.target.value = val.slice(0, 10);
+            setMobileNum(val.slice(0,10));
+        }
     }
 
     const handleIdName = (e) => {
@@ -44,7 +56,7 @@ export default function FormSection() {
     const handlePersons = (e) => {
         setNoOfPersons(e.target.value);
     }
-    
+
     const sendData = (e) => {
         e.preventDefault();
         const data = {
@@ -57,10 +69,19 @@ export default function FormSection() {
             "idnum": idnum,
             "no_of_person": noOfPersons
         }
-        console.log(data)
-        axios.post(`http://localhost:8000/booking/book`, {username, gender, age, email, mobilenum, idname, idnum, noOfPersons})
-        .then(res => res.data ? sweetAlertSuccess() : "")
-        .catch(err => err && err.message ? sweetAlertError() : "")
+        console.log(data);
+        if(username.length<=4){
+            alert('Please enter a valid name');
+            setName('');
+            return;
+        }else if(age<=4){
+            alert("Invalid Age");
+            setAge('');
+            return ;
+        }
+        axios.post(`http://localhost:8000/booking/book`, { username, gender, age, email, mobilenum, idname, idnum, noOfPersons })
+            .then(res => res.data ? sweetAlertSuccess() : "")
+            .catch(err => err && err.message ? sweetAlertError() : "")
 
         setName('');
         setGender('');
@@ -88,7 +109,7 @@ export default function FormSection() {
             title: "Success",
             text: "Ticket Generated SuccessFully.",
             icon: "success"
-          })
+        })
     }
 
     const sweetAlertError = () => {
@@ -96,33 +117,36 @@ export default function FormSection() {
             title: "Error",
             text: "Error Occurred. Try Again.",
             icon: "error"
-          })
+        })
     }
 
     return (
         <div className="formContainer">
             <fieldset>
                 <legend>Personal Details</legend>
-                <form className="form-section">
+
+                <form className="form-section" >
                     <label htmlFor="name" required>Name: &nbsp;</label>
-                    <input type="text" id="name" value={username} onChange={handlename} required/><br />
+                    <input type="text" id="name" minLength="4" value={username} onChange={handlename} required /><br />
                     <label htmlFor="gender">Gender: &nbsp;</label>
-                    <input type="radio" name="gender" value="male" onChange={handlegender}/> Male&nbsp;
-                    <input type="radio" name="gender" value="female" onChange={handlegender}/> Female&nbsp;<br />
-                    <label htmlFor="age">Age: &nbsp;</label>
-                    <input type="number" name="age" id="age" value={age} onChange={handleAge}/>
+                    <input type="radio" name="gender" value="male" onChange={handlegender} /> Male&nbsp;
+                    <input type="radio" name="gender" value="female" onChange={handlegender} /> Female&nbsp;
+                    <input type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
+                    <label htmlFor="age" >Age: &nbsp;</label>
+                    <input type="number" name="age" maxLength="2" id="age" value={age} onChange={handleAge} />
                     <br />
                     <label htmlFor="mobile">Mobile: &nbsp;</label>
-                    <input type="number" name="amobilege" id="mobile" value={mobilenum} onChange={handleMobile}/>
+                    <input type="number" name="amobilege" id="mobile" maxLength="10" minLength="10" value={mobilenum} onChange={handleMobile} />
+
                     <br />
                     <label htmlFor="id-name" required>Id Name: &nbsp;</label>
-                    <input type="text" id="id-name" value={idname} onChange={handleIdName}/><br />
+                    <input type="text" id="id-name" value={idname} onChange={handleIdName} /><br />
                     <label htmlFor="id-no" required>Id Number: &nbsp;</label>
-                    <input type="text" id="id-no" value={idnum} onChange={handleIdNum}/><br />
+                    <input type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
                     <label htmlFor="noOfPerson" required>Number Of Persons: &nbsp;</label>
-                    <input type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons}/><br />
+                    <input type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
                     <label htmlFor="email">Email Address:&nbsp;</label>
-                    <input type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail}/><br />
+                    <input type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />
                     <button type="submit" onClick={sendData}>Submit</button>
                     <button onClick={clearForm}>Clear</button>
                 </form>
