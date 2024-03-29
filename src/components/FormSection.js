@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import './FormSection.css';
+import useRazorpay from "react-razorpay";
 
 export default function FormSection() {
 
@@ -13,6 +14,7 @@ export default function FormSection() {
     const [idname, setIdname] = useState('');
     const [idnum, setIdNum] = useState('');
     const [noOfPersons, setNoOfPersons] = useState('');
+    const [Razorpay] = useRazorpay();
 
     const handlename = (e) => {
         setName(e.target.value)
@@ -81,8 +83,11 @@ export default function FormSection() {
             return ;
         }
         axios.post(`http://localhost:8000/booking/book`, { username, gender, age, email, mobilenum, idname, idnum, noOfPersons })
-            .then(res => res.data ? sweetAlertSuccess() : "")
-            .catch(err => err && err.message ? sweetAlertError() : "")
+        .then(res => {
+            console.log(res.data.id);
+            rzr_pay_action(username,email,mobilenum,res.data.id);
+        })
+        .catch(err => err && err.message ? sweetAlertError() : "")
 
         setName('');
         setGender('');
@@ -120,6 +125,67 @@ export default function FormSection() {
             icon: "error"
         })
     }
+
+      
+const rzr_pay_action = (username,email,mobilenum,user_id) => {
+    console.log("clicked on rzr");
+    var amount = 10;
+    var options = {
+      "key": "rzp_test_XbZeljHYPVwHVJ", // Enter the Key ID generated from the Dashboard
+      "amount": amount*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "currency": "INR",
+      "name": "TempleTicket",
+      "description": "Test Transaction",
+      "image": ".",
+      "handler": function (response){
+                    var rzr_pay_id = response.razorpay_payment_id;
+                    alert("response after payment"+ rzr_pay_id);
+                    const data = {
+                        "user_id" : user_id,
+                        "rzr_pay_id" : rzr_pay_id,
+                        "amount" : amount 
+                    }
+                    console.log(data)
+                    axios.post(`http://localhost:8000/booking/payment`, {user_id, rzr_pay_id, amount})
+                    .then(res => res.data ? sweetAlertSuccess() : "")
+                    .catch(err => err && err.message ? sweetAlertError() : "")
+
+                    setName('');
+                    setGender('');
+                    setAge(0);
+                    setEmail('');
+                    setMobileNum(0);
+                    setIdname('');
+                    setIdNum('');
+                    setNoOfPersons('');
+        
+          console.log(response);
+      },
+      "prefill": {
+          "name": username,
+          "email": email,
+          "contact": mobilenum
+      },
+      "notes": {
+          "address": "Razorpay Corporate Office"
+      },
+      "theme": {
+          "color": "#3399cc"
+      }
+  };
+  
+  var rzp1 = new Razorpay(options);
+  rzp1.on('payment.failed', function (response){
+          alert(response.error.code);
+          alert(response.error.description);
+          alert(response.error.source);
+          alert(response.error.step);
+          alert(response.error.reason);
+          alert(response.error.metadata.order_id);
+          alert(response.error.metadata.payment_id);
+  });
+  rzp1.open();
+}
 
     return (
         <div>
