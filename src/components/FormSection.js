@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 export default function FormSection() {
     
-    const [name, setName] = useState('');
+    const [username, setName] = useState('');
     const [gender, setGender] = useState('');
     const [age, setAge] = useState(0);
     const [email, setEmail] = useState('');
@@ -47,28 +48,64 @@ export default function FormSection() {
     const sendData = (e) => {
         e.preventDefault();
         const data = {
-            "name": name,
+            "name": username,
             "gender": gender,
             "age": age,
             "email": email,
             "mobile": mobilenum,
             "idname": idname,
             "idnum": idnum,
-            "no_of_persons": noOfPersons
+            "no_of_person": noOfPersons
         }
-
         console.log(data)
-        axios.post(`http://localhost:8000/booking/book`, data)
-        .then(res => alert(res.data.message))
-        .catch(err => console.log(err))
+        axios.post(`http://localhost:8000/booking/book`, {username, gender, age, email, mobilenum, idname, idnum, noOfPersons})
+        .then(res => res.data ? sweetAlertSuccess() : "")
+        .catch(err => err && err.message ? sweetAlertError() : "")
+
+        setName('');
+        setGender('');
+        setAge(0);
+        setEmail('');
+        setMobileNum(0);
+        setIdname('');
+        setIdNum('');
+        setNoOfPersons('');
     }
+
+    const clearForm = () => {
+        setName('');
+        setGender('');
+        setAge(0);
+        setEmail('');
+        setMobileNum(0);
+        setIdname('');
+        setIdNum('');
+        setNoOfPersons('');
+    }
+
+    const sweetAlertSuccess = () => {
+        Swal.fire({
+            title: "Success",
+            text: "Ticket Generated SuccessFully.",
+            icon: "success"
+          })
+    }
+
+    const sweetAlertError = () => {
+        Swal.fire({
+            title: "Error",
+            text: "Error Occurred. Try Again.",
+            icon: "error"
+          })
+    }
+
     return (
         <div className="formContainer">
             <fieldset>
                 <legend>Personal Details</legend>
                 <form className="form-section">
                     <label htmlFor="name" required>Name: &nbsp;</label>
-                    <input type="text" id="name" value={name} onChange={handlename} required /><br />
+                    <input type="text" id="name" value={username} onChange={handlename} required/><br />
                     <label htmlFor="gender">Gender: &nbsp;</label>
                     <input type="radio" name="gender" value="male" onChange={handlegender}/> Male&nbsp;
                     <input type="radio" name="gender" value="female" onChange={handlegender}/> Female&nbsp;<br />
@@ -87,11 +124,10 @@ export default function FormSection() {
                     <label htmlFor="email">Email Address:&nbsp;</label>
                     <input type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail}/><br />
                     <button type="submit" onClick={sendData}>Submit</button>
+                    <button onClick={clearForm}>Clear</button>
                 </form>
 
             </fieldset>
         </div>
     );
 }
-/*
-name gender age mob id name, id no, no of person*/
