@@ -1,36 +1,133 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
+import Swal from 'sweetalert2';
 
 export default function FormSection() {
+    
+    const [username, setName] = useState('');
+    const [gender, setGender] = useState('');
+    const [age, setAge] = useState(0);
+    const [email, setEmail] = useState('');
+    const [mobilenum, setMobileNum] = useState(0);
+    const [idname, setIdname] = useState('');
+    const [idnum, setIdNum] = useState('');
+    const [noOfPersons, setNoOfPersons] = useState(0);
+
+    const handlename = (e) => {
+        setName(e.target.value);
+    }
+
+    const handlegender = (e) => {
+        setGender(e.target.value);
+    }
+
+    const handleAge = (e) => {
+        setAge(e.target.value);
+    }
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handleMobile = (e) => {
+        setMobileNum(e.target.value);
+    }
+
+    const handleIdName = (e) => {
+        setIdname(e.target.value);
+    }
+
+    const handleIdNum = (e) => {
+        setIdNum(e.target.value);
+    }
+
+    const handlePersons = (e) => {
+        setNoOfPersons(e.target.value);
+    }
+    
+    const sendData = (e) => {
+        e.preventDefault();
+        const data = {
+            "name": username,
+            "gender": gender,
+            "age": age,
+            "email": email,
+            "mobile": mobilenum,
+            "idname": idname,
+            "idnum": idnum,
+            "no_of_person": noOfPersons
+        }
+        console.log(data)
+        axios.post(`http://localhost:8000/booking/book`, {username, gender, age, email, mobilenum, idname, idnum, noOfPersons})
+        .then(res => res.data ? sweetAlertSuccess() : "")
+        .catch(err => err && err.message ? sweetAlertError() : "")
+
+        setName('');
+        setGender('');
+        setAge(0);
+        setEmail('');
+        setMobileNum(0);
+        setIdname('');
+        setIdNum('');
+        setNoOfPersons('');
+    }
+
+    const clearForm = () => {
+        setName('');
+        setGender('');
+        setAge(0);
+        setEmail('');
+        setMobileNum(0);
+        setIdname('');
+        setIdNum('');
+        setNoOfPersons('');
+    }
+
+    const sweetAlertSuccess = () => {
+        Swal.fire({
+            title: "Success",
+            text: "Ticket Generated SuccessFully.",
+            icon: "success"
+          })
+    }
+
+    const sweetAlertError = () => {
+        Swal.fire({
+            title: "Error",
+            text: "Error Occurred. Try Again.",
+            icon: "error"
+          })
+    }
+
     return (
         <div>
             <fieldset>
                 <legend>Personal Details</legend>
-                <form action="">
+                <form className="form-section">
                     <label htmlFor="name" required>Name: &nbsp;</label>
-                    <input type="text" id="name" required /><br />
+                    <input type="text" id="name" value={username} onChange={handlename} required/><br />
                     <label htmlFor="gender">Gender: &nbsp;</label>
-                    <input type="radio" name="gender" value="male" /> Male&nbsp;
-                    <input type="radio" name="gender" value="female" /> Female&nbsp;<br />
+                    <input type="radio" name="gender" value="male" onChange={handlegender}/> Male&nbsp;
+                    <input type="radio" name="gender" value="female" onChange={handlegender}/> Female&nbsp;<br />
                     <label htmlFor="age">Age: &nbsp;</label>
-                    <input type="number" name="age" id="age" />
+                    <input type="number" name="age" id="age" value={age} onChange={handleAge}/>
                     <br />
                     <label htmlFor="mobile">Mobile: &nbsp;</label>
-                    <input type="number" name="amobilege" id="mobile" />
+                    <input type="number" name="amobilege" id="mobile" value={mobilenum} onChange={handleMobile}/>
                     <br />
                     <label htmlFor="id-name" required>Id Name: &nbsp;</label>
-                    <input type="text" id="id-name" /><br />
+                    <input type="text" id="id-name" value={idname} onChange={handleIdName}/><br />
                     <label htmlFor="id-no" required>Id Number: &nbsp;</label>
-                    <input type="text" id="id-no" /><br />
+                    <input type="text" id="id-no" value={idnum} onChange={handleIdNum}/><br />
                     <label htmlFor="noOfPerson" required>Number Of Persons: &nbsp;</label>
-                    <input type="number" id="noOfPerson" /><br />
+                    <input type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons}/><br />
                     <label htmlFor="email">Email Address:&nbsp;</label>
-                    <input type="email" name="email" id="email" data-validate="email" /><br />
-                    <button type="submit">Submit</button>
+                    <input type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail}/><br />
+                    <button type="submit" onClick={sendData}>Submit</button>
+                    <button onClick={clearForm}>Clear</button>
                 </form>
 
             </fieldset>
         </div>
     );
 }
-/*
-name gender age mob id name, id no, no of person*/

@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.carousel{
+    /* border: 1px solid rgba(255, 255, 255, 0.329); */
+    width: 100vw;
+    height: 50rem;
+}
+.image{
+    width: 100vw;
+    height: 50rem;
+}

@@ -1,5 +1,10 @@
-.card{
+/* .card{
     min-width: 200px;
     color: orange;
     border: none;
+} */
+.row{
+    background-color: rgba(48, 206, 162, 0.311);
+    backdrop-filter: blur(6px);
+    /* border: 1px solid black; */
 }
