@@ -191,15 +191,18 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
         <div>
             <div className="formContainer">
             <fieldset>
-                <legend>Personal Details</legend>
+                <legend className="heading">Personal Details</legend>
 
                 <form className="form-section" >
                     <label  htmlFor="name" required>Name: &nbsp;</label>
                     <input className="nameInput" placeholder="Enter Your Name" type="text" id="name" minLength="4" value={username} onChange={handlename} required /><br />
-                    <label htmlFor="gender">Gender: &nbsp;</label>
-                    <input className="genderInput" type="radio" name="gender" value="male" onChange={handlegender} /> Male&nbsp;
-                    <input type="radio" name="gender" value="female" onChange={handlegender} /> Female&nbsp;
+                    
+                    <div className="gender">
+                    <label htmlFor="gender">Gender </label>
+                    <input  className="gendermale"  type="radio" name="gender" value="male" onChange={handlegender} /> Male
+                    <input className="genderfemale" type="radio" name="gender" value="female" onChange={handlegender} /> Female
                     <input type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
+                    </div>
                     <label htmlFor="age" >Age: &nbsp;</label>
                     <input className="ageInput" type="number" name="age" maxLength="2" id="age" value={age} onChange={handleAge} />
                     <br />
@@ -212,7 +215,7 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
                     <label htmlFor="id-no" required>Id Number: &nbsp;</label>
                     <input className="idnumber-input" placeholder="0000-0000-0000-0000" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
                     <label htmlFor="noOfPerson" required>Number Of Persons: &nbsp;</label>
-                    <input className="numberofperson-input" placeholder="min-1" type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
+                    <input className="numberofperson-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
                     <label htmlFor="email">Email Address:&nbsp;</label>
                     <input className="emailInput" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />
                     <div className="btn">
