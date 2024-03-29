@@ -1,0 +1,27 @@
+.Footer-Container{
+    max-width: 100%;
+    background-color: burlywood;
+    padding: 2rem;
+}
+.sub-footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.logo{
+    max-width: 200px;
+    margin-left: -4rem;
+    /* margin-right: 10rem; */
+}
+.logo-title{
+    text-transform: capitalize;
+    margin-left: -4rem;
+}
+.footer-sub-title{
+    text-transform: capitalize;
+    text-decoration: solid;
+}
+.footer-sub-title-contact{
+    display: flex;
+    gap: 10px;
+}

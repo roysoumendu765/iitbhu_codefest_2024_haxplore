@@ -9,35 +9,36 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className="Footer-Container  max-width">
-      <div>
+    <div className="Footer-Container  ">
+
+      <div className="sub-footer-container">
 
         {/* main title and logo */}
 
-        <div>
-          <img src={bhulogo} alt ="logo"/>
-          <h2>Footer Temple</h2>
+        <div className="img-title-section">
+          <img className="logo" src={bhulogo} alt ="logo"/>
+          <h2 className="logo-title">Footer Temple</h2>
         </div>
 
         {/* Contact info Area */}
 
         <div>
-          <h3>Contact info</h3>
+          <h3 className="footer-sub-title">Contact info</h3>
           <div>
 
-            <div>
+            <div className="footer-sub-title-contact">
               <p><IoMdContact /></p>
-              <a href='#'> Contact Us</a>
+              <span><a href='#'> Contact Us</a></span>
             </div>
 
-            <div>
+            <div className="footer-sub-title-contact">
               <p><CgWebsite /></p>
-              <a href='#'> info@KashiVishwanth.com</a>
+              <span><a href='#'> info@KashiVishwanth.com</a></span>
             </div>
 
-            <div>
+            <div className="footer-sub-title-contact">
               <p><TiMessages /></p>
-              <a href='#'> Send Your Enquery</a>
+             <span> <a href='#'> Send Your Enquery</a></span>
             </div>
 
           </div>
@@ -47,7 +48,7 @@ const Footer = () => {
         {/* Media Link Area */}
 
         <div>
-          <h3>Media Links</h3>
+          <h3 className="footer-sub-title">Media Links</h3>
           <div>
 
             <div>
@@ -67,7 +68,7 @@ const Footer = () => {
         {/* Policy Info */}
 
         <div>
-          <h3>Policy Info</h3>
+          <h3 className="footer-sub-title">Policy Info</h3>
           <div>
 
             <div>
@@ -98,7 +99,7 @@ const Footer = () => {
 
         <div>
 
-          <h3>Payment Partner</h3>
+          <h3 className="footer-sub-title">Payment Partner</h3>
 
           <div>
             <img src="#"/>
