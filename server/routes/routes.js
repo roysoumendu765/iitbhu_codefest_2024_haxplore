@@ -5,6 +5,7 @@ const router = express.Router();
 const Model = require('../models/models');
 
 router.post('/book', async (req, res) => {
+    console.log(req)
     const data = new Model({
         name: req.body.name,
         gender: req.body.gender,
