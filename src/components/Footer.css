@@ -1,78 +1,101 @@
-.Footer-Container{
-    max-width: 100%;
-    background-color: rgb(230, 212, 188);
-    padding: 2rem;
+.Footer-Container {
+  width: 100%;
+  background-color: rgb(223, 217, 211);
+  padding: 2rem;
 }
-.sub-footer-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: aqua;
-   
+.sub-footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: aqua; */
 }
-.img-title-section img{
-    width: 13rem;
-    height: 16rem;
-    margin-left: 3rem;
+.img-title-section img {
+  width: 7rem;
+  height: 9rem;
+  margin-left: 3rem;
 }
-.logo-title{
-    margin-top: 2rem;
-    text-transform: capitalize;
-    margin-left: 3.5rem;
-    color: rgb(28, 27, 27);
+.logo-title {
+  margin-top: 2rem;
+  text-transform: capitalize;
+  margin-left: 1rem;
+  color: rgb(28, 27, 27);
 }
-.footer-sub-title{
-    text-transform: capitalize;
-    text-decoration: solid;
-    text-align: center;
-  
+.footer-sub-title {
+  text-transform: capitalize;
+  text-decoration: solid;
+  text-align: center;
 }
-.footer-sub-title-contact{
-    display: flex;
-    gap: 10px;
-    text-decoration: none;
-    margin-top:0.5rem;
-   
+.footer-sub-title-contact {
+  display: flex;
+  text-decoration: none;
+}
+.footer-sub-title-contact p:first-of-type{
+font-size:25px;
+margin-top:-8px;
+margin-right: 10px;
+}
+.contact-sub-icon {
+  font-size: 20px;
+  gap: 15px;
+}
+a {
+  text-decoration: none;
+  color: rgb(69, 68, 68);
+  text-decoration: solid;
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer-sub-title-contact p {
+  font-size: 15px;
 }
 
-
-a{
-    text-decoration: none;
-    color: rgb(69, 68, 68);
-    text-decoration:solid;
-    font-weight: 700;
-    font-size:18px;
+.footer-sub-title-media {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  margin-top: 0.5rem;
 }
-
-.footer-sub-title-media{
-    display: flex;
-    gap: 10px;
-    text-decoration: none;
-    margin-top:0.5rem;
-}
-.footer-sub-title-policy{
-    display: flex;
-    gap: 10px;
-    text-decoration: none;
-    margin-top:0.5rem;
+.footer-sub-title-policy {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  margin-top: 0.5rem;
 }
 .paymentcard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-.paymentcard img{
-    height:4rem;
-    width: 8rem;
+.paymentcard img {
+  height: 4rem;
+  width: 8rem;
 }
-.media-sub-title-content{
- margin-top:2rem ;
+.media-sub-title-content {
+  margin-top: 2rem;
 }
-.policy-sub-title-content{
-    margin-top: 2rem;
-    margin-left: 7rem;
+.policy-sub-title-content {
+  margin-top: 2rem;
+  margin-left: 7rem;
 }
-.contact-sub-title-content{
-    margin-top: 2rem;
-    margin-left: 5rem;
+.contact-sub-title-content {
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+.media-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 2rem;
+  margin-right: 5rem;
+}
+.media-icon span a {
+  font-size: 35px;
+  color: black;
+}
+.copyright {
+  display: flex;
+  gap: 5px;
+  text-decoration: solid;
+  font-weight: 700;
+  justify-content: center;
 }

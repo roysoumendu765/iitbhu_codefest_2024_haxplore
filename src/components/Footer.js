@@ -6,6 +6,8 @@ import { TbPointFilled } from "react-icons/tb";
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { BsYoutube } from "react-icons/bs";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { MdCopyright } from "react-icons/md";
 import Razorpay from "./assests/razorpay.png";
 import upi from "./assests/upi.png";
 import paypal from "./assests/paypallogo.png";
@@ -14,6 +16,7 @@ import bhulogo from "./assests/bhulogo.png";
 
 import React from "react";
 import "./Footer.css";
+import { IconContext } from "react-icons";
 
 const Footer = () => {
   return (
@@ -34,7 +37,7 @@ const Footer = () => {
 
           <div className="contact-sub-title-content">
             <div className="footer-sub-title-contact">
-              <p size={"8rem"}>
+              <p>
                 <IoMdContact />
               </p>
               <span >
@@ -43,7 +46,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-sub-title-contact">
-              <p className="icon">
+              <p>
                 <CgWebsite />
               </p>
               <span>
@@ -52,7 +55,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-sub-title-contact">
-              <p className="icon">
+              <p>
                 <TiMessages />
               </p>
               <span>
@@ -69,16 +72,12 @@ const Footer = () => {
 
           <div className="media-sub-title-content">
             <div className="footer-sub-title-media">
-              <p className="icon">
-                <TbPointFilled />
-              </p>
+             
               <a href="#">Temple Services</a>
             </div>
 
             <div className="footer-sub-title-media">
-              <p>
-                <TbPointFilled />
-              </p>
+              
               <a href="#">Login/Register</a>
             </div>
           </div>
@@ -91,37 +90,27 @@ const Footer = () => {
 
           <div className="policy-sub-title-content">
             <div className="footer-sub-title-policy">
-              <p>
-                <TbPointFilled />
-              </p>
+             
               <a href="#"> How we Work</a>
             </div>
 
             <div className="footer-sub-title-contact">
-              <p>
-                <TbPointFilled />
-              </p>
+              
               <a href="#"> Privacy Policy</a>
             </div>
 
             <div className="footer-sub-title-contact">
-              <p>
-                <TbPointFilled />
-              </p>
+             
               <a href="#"> Term of Use</a>
             </div>
 
             <div className="footer-sub-title-contact">
-              <p>
-                <TbPointFilled />
-              </p>
+             
               <a href="#"> FAQ</a>
             </div>
 
             <div className="footer-sub-title-contact">
-              <p>
-                <TbPointFilled />
-              </p>
+              
               <a href="#"> Cancellation & Refund Policy</a>
             </div>
           </div>
@@ -148,16 +137,18 @@ const Footer = () => {
             <img src={visa} alt="visalogo" />
           </div>
         </div>
+      </div>
 
-
-        <div>
-          <span><a href="#"><BsTwitterX /></a></span>
+      <div className="media-icon">
+          <span><a href="#">< BsTwitterX /></a></span>
           <span><a href="#"><FaFacebookF /></a></span>
           <span><a href="#"><BsYoutube /></a></span>
-          <span><a href="#"><BsTwitterX /></a></span>
-          <span><a href="#"><BsTwitterX /></a></span>
-        </div>
+          <span><a href="#"><FaSquareInstagram /></a></span>
+          
       </div>
+      <div className="copyright">
+         <p>Temple</p><span><MdCopyright /></span><p>2024. All Rights Reserved.</p>
+        </div>
 
     </div>
   );
