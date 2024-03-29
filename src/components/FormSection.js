@@ -16,6 +16,7 @@ export default function FormSection() {
     const [idnum, setIdNum] = useState('');
     const [noOfPersons, setNoOfPersons] = useState('');
     const [Razorpay] = useRazorpay();
+    const [total,setTotal] = useState(0);
 
     const handlename = (e) => {
         setName(e.target.value)
@@ -59,6 +60,7 @@ export default function FormSection() {
 
     const handlePersons = (e) => {
         setNoOfPersons(e.target.value);
+        setTotal(e.target.value * 10);
     }
 
     const sendData = (e) => {
@@ -219,8 +221,10 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
                     <input className="numberofperson-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
                     <label htmlFor="email">Email Address:&nbsp;</label>
                     <input className="emailInput" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />
+                    <label htmlFor="total" >Total (10rs per person): &nbsp;</label>
+                    <input type="number" placeholder={total} disabled/>
                     <div className="btn">
-                    <button className="submitbtn" type="submit" onClick={sendData}>Submit</button>
+                    <button className="submitbtn" type="submit" onClick={sendData}>Buy</button>
                     <button className="Resetbtn" onClick={clearForm}>Reset</button>
                     </div>
                 </form>
