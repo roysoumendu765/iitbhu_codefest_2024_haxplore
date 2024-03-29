@@ -5,20 +5,20 @@ const router = express.Router();
 const Model = require('../models/models');
 
 router.post('/book', async (req, res) => {
-    console.log(req)
+    console.log(req.body)
     const data = new Model({
-        name: req.body.name,
+        name: req.body.username,
         gender: req.body.gender,
         age: req.body.age,
-        mobile: req.body.mobile,
+        mobile: req.body.mobilenum,
         email: req.body.email,
         idname: req.body.idname,
         idnum: req.body.idnum,
-        no_of_person: req.body.no_of_person
+        no_of_person: req.body.noOfPersons
     })
     try {
         const dataSaved = await data.save();
-        res.status(200).json({message: `Tickets Generated Successfully for ${dataSaved.data.name}`});
+        res.status(200).json({message: `Tickets Generated Successfully.`});
     } catch (error) {
         res.status(400).json({message: error.message});
     }
