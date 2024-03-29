@@ -94,8 +94,12 @@ a {
 }
 .copyright {
   display: flex;
+  
   gap: 5px;
   text-decoration: solid;
   font-weight: 700;
   justify-content: center;
+}
+.copyright p{
+  color: black;
 }
