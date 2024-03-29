@@ -4,8 +4,8 @@ import Counter from './Counter.js';
 import ControlledCarousel from './ControlledCarousel.js';
 const Main = () => {
   return (
-    <div class="row">
-      <div class="col-12 carousel">
+    <div className="row">
+      <div className="col-12 carousel">
     
       </div>
       <div className="col-12 counterdiv">
