@@ -26,7 +26,7 @@ const Footer = () => {
 
         {/* Contact info Area */}
 
-        <div className="">
+        <div >
           <h3 className="footer-sub-title">Contact info</h3>
 
           <div className="contact-sub-title-content">
@@ -34,7 +34,7 @@ const Footer = () => {
               <p size={"8rem"}>
                 <IoMdContact />
               </p>
-              <span>
+              <span >
                 <a href="#"> Contact Us</a>
               </span>
             </div>
@@ -53,7 +53,6 @@ const Footer = () => {
                 <TiMessages />
               </p>
               <span>
-                {" "}
                 <a href="#"> Send Your Enquery</a>
               </span>
             </div>
@@ -131,22 +130,23 @@ const Footer = () => {
           <h3 className="footer-sub-title">Payment Partner</h3>
 
           <div className="paymentcard">
-            <img src={Razorpay} />
+            <img src={Razorpay} alt="Razorpaylogo"/>
           </div>
 
           <div className="paymentcard">
-            <img src={paypal} />
+            <img src={paypal} alt="paypallogo" />
           </div>
 
           <div className="paymentcard">
-            <img src={upi} />
+            <img src={upi}  alt="upilogo"/>
           </div>
 
           <div className="paymentcard">
-            <img src={visa} />
+            <img src={visa} alt="visalogo" />
           </div>
         </div>
       </div>
+
     </div>
   );
 };
