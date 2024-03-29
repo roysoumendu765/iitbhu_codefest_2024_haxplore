@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import './FormSection.css';
+import bhulogo from '../components/assests/bhulogo.png';
 import useRazorpay from "react-razorpay";
 
 export default function FormSection() {
@@ -138,7 +139,7 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
       "currency": "INR",
       "name": "TempleTicket",
       "description": "Test Transaction",
-      "image": ".",
+      "image": bhulogo,
       "handler": function (response){
                     var rzr_pay_id = response.razorpay_payment_id;
                     alert("response after payment"+ rzr_pay_id);
