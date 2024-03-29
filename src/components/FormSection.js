@@ -141,11 +141,11 @@ export default function FormSection() {
                     <input className="ageInput" type="number" name="age" maxLength="2" id="age" value={age} onChange={handleAge} />
                     <br />
                     <label htmlFor="mobile">Mobile: &nbsp;</label>
-                    <input className="mobileInput" type="number" name="amobilege" id="mobile" maxLength="10" minLength="10" value={mobilenum} onChange={handleMobile} />
+                    <input className="mobileInput" placeholder="(+91) 0000000000" type="number" name="amobilege" id="mobile" maxLength="10" minLength="10" value={mobilenum} onChange={handleMobile} />
 
                     <br />
                     <label htmlFor="id-name" required>Id Name: &nbsp;</label>
-                    <input className="idInput" placeholder="eg:Aadhar,Pancard,Passport" type="text" id="id-name" value={idname} onChange={handleIdName} /><br />
+                    <input className="idInput" placeholder="eg:Aadhar,Passport..." type="text" id="id-name" value={idname} onChange={handleIdName} /><br />
                     <label htmlFor="id-no" required>Id Number: &nbsp;</label>
                     <input className="idnumber-input" placeholder="0000-0000-0000-0000" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
                     <label htmlFor="noOfPerson" required>Number Of Persons: &nbsp;</label>
