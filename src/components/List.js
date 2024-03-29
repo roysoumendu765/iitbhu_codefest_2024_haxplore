@@ -21,13 +21,13 @@ const List = (props) => {
       <h1 className='ticket-heading'>Online Ticket</h1>
       <div/>
       <div className='ticketmain'>
-      <ul className="list-details">
-        <li className='list-items'>Name: {listitems && listitems[0] && listitems[0].name? listitems[0].name : ""}</li>
-        <li className='list-items'>Age: {listitems && listitems[0] && listitems[0].age ? listitems[0].age : ""}</li>
-        <li className='list-items'>Gender: {listitems && listitems[0] && listitems[0].gender ? listitems[0].gender : ""}</li>
-        <li className='list-items'>Mobile: {listitems && listitems[0] && listitems[0].mobile ? listitems[0].mobile : ""}</li>
-        <li className='list-items'>Email: {listitems && listitems[0] && listitems[0].email ? listitems[0].email : ""}</li>
-        <li className='list-items'>Number Of Tickets: {listitems && listitems[0] && listitems[0].no_of_person ? listitems[0].no_of_person : ""}</li>
+      <ul className="list-details graduate-regular">
+        <li className='list-items'>Name:  {listitems && listitems[0] && listitems[0].name? listitems[0].name : ""}</li>
+        <li className='list-items'>Age:  {listitems && listitems[0] && listitems[0].age ? listitems[0].age : ""}</li>
+        <li className='list-items'>Gender:  {listitems && listitems[0] && listitems[0].gender ? listitems[0].gender : ""}</li>
+        <li className='list-items'>Mobile:  {listitems && listitems[0] && listitems[0].mobile ? listitems[0].mobile : ""}</li>
+        <li className='list-items'>Email:  {listitems && listitems[0] && listitems[0].email ? listitems[0].email : ""}</li>
+        <li className='list-items'>Number Of Tickets:  {listitems && listitems[0] && listitems[0].no_of_person ? listitems[0].no_of_person : ""}</li>
       </ul>
       <div className="qrcode-section">
         <QRCode className='qrcode-img'
@@ -39,6 +39,7 @@ const List = (props) => {
       </div>
       </div>
     </div>
+    <button className=''></button>
     </div>
   )
 }
