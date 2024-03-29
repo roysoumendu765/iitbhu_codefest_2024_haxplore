@@ -4,7 +4,9 @@ const uri = `mongodb+srv://roysoumendu765:${password}@cluster0.jpoyoge.mongodb.n
 
 const connect = async () => {
     try {
-        await mongoose.connect(uri);
+        await mongoose.connect(uri,{
+            serverSelectionTimeoutMS: 5000
+        });
         console.log("DataBase Connection Established");
     } catch (error) {
         console.log(error)
