@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <div class="row">
       <div class="col-12 carousel">
-        
+    
       </div>
       <div class="col-12 counterdiv">
             <Counter/>
@@ -14,4 +14,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Main;
