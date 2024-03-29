@@ -3,6 +3,9 @@ import { IoMdContact } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { TiMessages } from "react-icons/ti";
 import { TbPointFilled } from "react-icons/tb";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+import { BsYoutube } from "react-icons/bs";
 import Razorpay from "./assests/razorpay.png";
 import upi from "./assests/upi.png";
 import paypal from "./assests/paypallogo.png";
@@ -144,6 +147,15 @@ const Footer = () => {
           <div className="paymentcard">
             <img src={visa} alt="visalogo" />
           </div>
+        </div>
+
+
+        <div>
+          <span><a href="#"><BsTwitterX /></a></span>
+          <span><a href="#"><FaFacebookF /></a></span>
+          <span><a href="#"><BsYoutube /></a></span>
+          <span><a href="#"><BsTwitterX /></a></span>
+          <span><a href="#"><BsTwitterX /></a></span>
         </div>
       </div>
 
