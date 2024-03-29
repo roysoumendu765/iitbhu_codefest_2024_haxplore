@@ -1,13 +1,13 @@
 .Footer-Container{
     max-width: 100%;
-    background-color: burlywood;
+    background-color: rgb(230, 212, 188);
     padding: 2rem;
 }
 .sub-footer-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: aqua;
+    /* background-color: aqua; */
    
 }
 .img-title-section img{
@@ -18,13 +18,14 @@
 .logo-title{
     margin-top: 2rem;
     text-transform: capitalize;
-    margin-left: 4rem;
+    margin-left: 3.5rem;
+    color: rgb(28, 27, 27);
 }
 .footer-sub-title{
     text-transform: capitalize;
     text-decoration: solid;
-    
-   
+    text-align: center;
+  
 }
 .footer-sub-title-contact{
     display: flex;
@@ -34,11 +35,13 @@
    
 }
 
+
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(69, 68, 68);
     text-decoration:solid;
     font-weight: 700;
+    font-size:18px;
 }
 
 .footer-sub-title-media{
