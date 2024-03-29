@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import './FormSection.css';
 
 export default function FormSection() {
     
@@ -100,34 +101,38 @@ export default function FormSection() {
     }
 
     return (
-        <div className="formContainer">
+        <div>
+            <div className="formContainer">
             <fieldset>
                 <legend>Personal Details</legend>
                 <form className="form-section">
-                    <label htmlFor="name" required>Name: &nbsp;</label>
-                    <input type="text" id="name" value={username} onChange={handlename} required/><br />
+                    <label  htmlFor="name" required>Name: &nbsp;</label>
+                    <input className="nameInput" placeholder="Enter Your Name" type="text" id="name" value={username} onChange={handlename} required/><br />
                     <label htmlFor="gender">Gender: &nbsp;</label>
-                    <input type="radio" name="gender" value="male" onChange={handlegender}/> Male&nbsp;
+                    <input className="genderInput" type="radio" name="gender" value="male" onChange={handlegender}/> Male&nbsp;
                     <input type="radio" name="gender" value="female" onChange={handlegender}/> Female&nbsp;<br />
                     <label htmlFor="age">Age: &nbsp;</label>
-                    <input type="number" name="age" id="age" value={age} onChange={handleAge}/>
+                    <input className="ageInput" type="number" name="age" id="age" value={age} onChange={handleAge}/>
                     <br />
                     <label htmlFor="mobile">Mobile: &nbsp;</label>
-                    <input type="number" name="amobilege" id="mobile" value={mobilenum} onChange={handleMobile}/>
+                    <input className="mobileInput" type="number" name="amobilege" id="mobile" value={mobilenum} onChange={handleMobile}/>
                     <br />
                     <label htmlFor="id-name" required>Id Name: &nbsp;</label>
-                    <input type="text" id="id-name" value={idname} onChange={handleIdName}/><br />
+                    <input className="idInput" placeholder="eg:Aadhar,Pancard,Passport" type="text" id="id-name" value={idname} onChange={handleIdName}/><br />
                     <label htmlFor="id-no" required>Id Number: &nbsp;</label>
-                    <input type="text" id="id-no" value={idnum} onChange={handleIdNum}/><br />
+                    <input className="idnumber-input" placeholder="0000-0000-0000-0000" type="text" id="id-no" value={idnum} onChange={handleIdNum}/><br />
                     <label htmlFor="noOfPerson" required>Number Of Persons: &nbsp;</label>
-                    <input type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons}/><br />
+                    <input className="numberofperson-input" placeholder="min-1" type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons}/><br />
                     <label htmlFor="email">Email Address:&nbsp;</label>
-                    <input type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail}/><br />
-                    <button type="submit" onClick={sendData}>Submit</button>
-                    <button onClick={clearForm}>Clear</button>
+                    <input className="emailInput" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail}/><br />
+                    <div className="btn">
+                    <button className="submitbtn" type="submit" onClick={sendData}>Submit</button>
+                    <button className="Resetbtn" onClick={clearForm}>Reset</button>
+                    </div>
                 </form>
 
             </fieldset>
+        </div>
         </div>
     );
 }
