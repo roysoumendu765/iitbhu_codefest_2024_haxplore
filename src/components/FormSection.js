@@ -55,7 +55,13 @@ export default function FormSection() {
     }
 
     const handleIdNum = (e) => {
-        setIdNum(e.target.value);
+        let val  = e.target.value;
+        if(val.length>12){
+            setIdNum(e.target.value.slice(0,12));
+            e.target.value=e.target.value.slice(0,12);
+        }else{
+            setIdNum(val);
+        }
     }
 
     const handlePersons = (e) => {
