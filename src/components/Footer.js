@@ -10,8 +10,8 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div>
-      <div>
+    <div className='row'>
+      <div className="col-12">
 
         {/* main title and logo */}
 
