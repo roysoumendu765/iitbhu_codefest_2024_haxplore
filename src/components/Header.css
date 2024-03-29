@@ -4,12 +4,14 @@
 }
 .header{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     color: white;
     /* background-color: rgb(3, 122, 140); */
     background-color: black;
     height: 3.5rem;
+    width: 100%;
 
 }
 h1{

@@ -100,7 +100,7 @@ export default function FormSection() {
     }
 
     return (
-        <div>
+        <div className="formContainer">
             <fieldset>
                 <legend>Personal Details</legend>
                 <form className="form-section">
