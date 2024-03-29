@@ -18,7 +18,7 @@ router.post('/book', async (req, res) => {
     })
     try {
         const dataSaved = await data.save();
-        res.status(200).json({message: `Tickets Generated Successfully.`});
+        res.status(200).json({id: dataSaved._id, message: `Tickets Generated Successfully.`});
     } catch (error) {
         res.status(400).json({message: error.message});
     }
