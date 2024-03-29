@@ -2,123 +2,153 @@ import { CgMail } from "react-icons/cg";
 import { IoMdContact } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { TiMessages } from "react-icons/ti";
-import bhulogo from "./assests/bhulogo.png"
+import { TbPointFilled } from "react-icons/tb";
+import Razorpay from "./assests/razorpay.png";
+import upi from "./assests/upi.png";
+import paypal from "./assests/paypallogo.png";
+import visa from "./assests/visa.png";
+import bhulogo from "./assests/bhulogo.png";
 
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <div className="Footer-Container  ">
 
       <div className="sub-footer-container">
-
         {/* main title and logo */}
 
         <div className="img-title-section">
-          <img className="logo" src={bhulogo} alt ="logo"/>
+          <img  src={bhulogo} alt="logo" />
           <h2 className="logo-title">Footer Temple</h2>
         </div>
 
         {/* Contact info Area */}
 
-        <div>
+        <div className="">
           <h3 className="footer-sub-title">Contact info</h3>
-          <div>
 
+          <div className="contact-sub-title-content">
             <div className="footer-sub-title-contact">
-              <p><IoMdContact /></p>
-              <span><a href='#'> Contact Us</a></span>
+              <p size={"8rem"}>
+                <IoMdContact />
+              </p>
+              <span>
+                <a href="#"> Contact Us</a>
+              </span>
             </div>
 
             <div className="footer-sub-title-contact">
-              <p><CgWebsite /></p>
-              <span><a href='#'> info@KashiVishwanth.com</a></span>
+              <p className="icon">
+                <CgWebsite />
+              </p>
+              <span>
+                <a href="#"> info@KashiVishwanth.com</a>
+              </span>
             </div>
 
             <div className="footer-sub-title-contact">
-              <p><TiMessages /></p>
-             <span> <a href='#'> Send Your Enquery</a></span>
+              <p className="icon">
+                <TiMessages />
+              </p>
+              <span>
+                {" "}
+                <a href="#"> Send Your Enquery</a>
+              </span>
             </div>
-
           </div>
-
         </div>
 
         {/* Media Link Area */}
 
         <div>
           <h3 className="footer-sub-title">Media Links</h3>
-          <div>
 
-            <div>
-
-              <a href='#'>Temple Services</a>
+          <div className="media-sub-title-content">
+            <div className="footer-sub-title-media">
+              <p className="icon">
+                <TbPointFilled />
+              </p>
+              <a href="#">Temple Services</a>
             </div>
 
-            <div>
-
-              <a href='#'>Login/Register</a>
+            <div className="footer-sub-title-media">
+              <p>
+                <TbPointFilled />
+              </p>
+              <a href="#">Login/Register</a>
             </div>
-
           </div>
-
         </div>
 
         {/* Policy Info */}
 
         <div>
           <h3 className="footer-sub-title">Policy Info</h3>
-          <div>
 
-            <div>
-              <a href='#'> How we Work</a>
+          <div className="policy-sub-title-content">
+            <div className="footer-sub-title-policy">
+              <p>
+                <TbPointFilled />
+              </p>
+              <a href="#"> How we Work</a>
             </div>
 
-            <div>
-              <a href='#'> Privacy Policy</a>
+            <div className="footer-sub-title-contact">
+              <p>
+                <TbPointFilled />
+              </p>
+              <a href="#"> Privacy Policy</a>
             </div>
 
-            <div>
-              <a href='#'> Term of Use</a>
+            <div className="footer-sub-title-contact">
+              <p>
+                <TbPointFilled />
+              </p>
+              <a href="#"> Term of Use</a>
             </div>
 
-            <div>
-              <a href='#'> FAQ</a>
+            <div className="footer-sub-title-contact">
+              <p>
+                <TbPointFilled />
+              </p>
+              <a href="#"> FAQ</a>
             </div>
 
-            <div>
-              <a href='#'> Cancellation & Refund Policy</a>
+            <div className="footer-sub-title-contact">
+              <p>
+                <TbPointFilled />
+              </p>
+              <a href="#"> Cancellation & Refund Policy</a>
             </div>
-
           </div>
-
         </div>
 
         {/* Payment gatyway link */}
 
         <div>
-
           <h3 className="footer-sub-title">Payment Partner</h3>
 
-          <div>
-            <img src="#"/>
+          <div className="paymentcard">
+            <img src={Razorpay} />
           </div>
 
-          <div>
-            <img src="#"/>
+          <div className="paymentcard">
+            <img src={paypal} />
           </div>
 
-          <div>
-            <img src="#"/>
+          <div className="paymentcard">
+            <img src={upi} />
           </div>
 
+          <div className="paymentcard">
+            <img src={visa} />
+          </div>
         </div>
-
       </div>
     </div>
-  )
-}
-
+  );
+};
 
 export default Footer;

@@ -6,22 +6,70 @@
 .sub-footer-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    background-color: aqua;
+   
 }
-.logo{
-    max-width: 200px;
-    margin-left: -4rem;
-    /* margin-right: 10rem; */
+.img-title-section img{
+    width: 13rem;
+    height: 16rem;
+    margin-left: 3rem;
 }
 .logo-title{
+    margin-top: 2rem;
     text-transform: capitalize;
-    margin-left: -4rem;
+    margin-left: 4rem;
 }
 .footer-sub-title{
     text-transform: capitalize;
     text-decoration: solid;
+    
+   
 }
 .footer-sub-title-contact{
     display: flex;
     gap: 10px;
+    text-decoration: none;
+    margin-top:0.5rem;
+   
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    text-decoration:solid;
+    font-weight: 700;
+}
+
+.footer-sub-title-media{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    margin-top:0.5rem;
+}
+.footer-sub-title-policy{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    margin-top:0.5rem;
+}
+.paymentcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.paymentcard img{
+    height:4rem;
+    width: 8rem;
+}
+.media-sub-title-content{
+ margin-top:2rem ;
+}
+.policy-sub-title-content{
+    margin-top: 2rem;
+    margin-left: 7rem;
+}
+.contact-sub-title-content{
+    margin-top: 2rem;
+    margin-left: 5rem;
 }
