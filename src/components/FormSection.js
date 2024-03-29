@@ -5,12 +5,12 @@ export default function FormSection() {
     
     const [name, setName] = useState('');
     const [gender, setGender] = useState('');
-    const [age, setAge] = useState();
+    const [age, setAge] = useState(0);
     const [email, setEmail] = useState('');
-    const [mobilenum, setMobileNum] = useState();
+    const [mobilenum, setMobileNum] = useState(0);
     const [idname, setIdname] = useState('');
     const [idnum, setIdNum] = useState('');
-    const [noOfPersons, setNoOfPersons] = useState();
+    const [noOfPersons, setNoOfPersons] = useState(0);
 
     const handlename = (e) => {
         setName(e.target.value);
@@ -58,11 +58,8 @@ export default function FormSection() {
         }
 
         console.log(data)
-        const headers = {
-            'Content-Type': 'application/json'
-        }
-        axios.post('http://localhost:8000/booking/book', {data}, {headers})
-        .then(res => console.log(res))
+        axios.post(`http://localhost:8000/booking/book`, data)
+        .then(res => alert(res.data.message))
         .catch(err => console.log(err))
     }
     return (
@@ -89,7 +86,7 @@ export default function FormSection() {
                     <input type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons}/><br />
                     <label htmlFor="email">Email Address:&nbsp;</label>
                     <input type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail}/><br />
-                    <button type="submit" onSubmit={sendData}>Submit</button>
+                    <button type="submit" onClick={sendData}>Submit</button>
                 </form>
 
             </fieldset>
