@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
     },
     idnum: {
         required: true,
-        type: Number,
+        type: String,
     },
     no_of_person:{
         required: true,
