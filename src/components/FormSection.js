@@ -12,7 +12,7 @@ export default function FormSection() {
     const [age, setAge] = useState('');
     const [email, setEmail] = useState('');
     const [mobilenum, setMobileNum] = useState('');
-    const [idname, setIdname] = useState('');
+    const [idname, setIdname] = useState('aadharCard');
     const [idnum, setIdNum] = useState('');
     const [noOfPersons, setNoOfPersons] = useState('');
     const [Razorpay] = useRazorpay();
@@ -105,7 +105,7 @@ export default function FormSection() {
         setAge(0);
         setEmail('');
         setMobileNum(0);
-        setIdname('');
+        setIdname('aadharCard');
         setIdNum('');
         setNoOfPersons('');
     }
@@ -254,7 +254,7 @@ export default function FormSection() {
                                 <label htmlFor="id-name" required className="neumorphic-label col-sm-4 col-form-label">Id Name: &nbsp;</label>
                                 <div className="col-sm-8">
                                     <select className="form-control idInput neumorphic-input" id="id-name" value={idname} onChange={handleIdName}>
-                                        <option selected value="aadharCard">Aadhar Card</option>
+                                        <option value="aadharCard">Aadhar Card</option>
                                         <option value="panCard">Pan Card</option>
                                         <option value="other">Voter Card</option>
                                         <option value="other">Others</option>
