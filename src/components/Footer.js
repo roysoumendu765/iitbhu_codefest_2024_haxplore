@@ -20,19 +20,19 @@ import { IconContext } from "react-icons";
 
 const Footer = () => {
   return (
-    <div className="Footer-Container  ">
+    <div className="Footer-Container d-flex flex-column ">
 
-      <div className="sub-footer-container">
+      <div className="sub-footer-container card d-flex flex-column flex-md-row  justify-content-around ">
         {/* main title and logo */}
 
-        <div className="img-title-section">
+        <div className="img-title-section card-img-top card box">
           <img  src={bhulogo} alt="logo" />
           <h2 className="logo-title">Footer Temple</h2>
         </div>
 
         {/* Contact info Area */}
 
-        <div >
+        <div className="card-body bg-warning box">
           <h3 className="footer-sub-title">Contact info</h3>
 
           <div className="contact-sub-title-content">
@@ -67,7 +67,7 @@ const Footer = () => {
 
         {/* Media Link Area */}
 
-        <div>
+        <div className=" bg-primary box">
           <h3 className="footer-sub-title">Media Links</h3>
 
           <div className="media-sub-title-content">
@@ -85,7 +85,7 @@ const Footer = () => {
 
         {/* Policy Info */}
 
-        <div>
+        <div className="  bg-danger box">
           <h3 className="footer-sub-title">Policy Info</h3>
 
           <div className="policy-sub-title-content">
@@ -118,7 +118,7 @@ const Footer = () => {
 
         {/* Payment gatyway link */}
 
-        <div>
+        <div className=" card-body bg-success box">
           <h3 className="footer-sub-title">Payment Partner</h3>
 
           <div className="paymentcard">
