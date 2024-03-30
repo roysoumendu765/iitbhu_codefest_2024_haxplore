@@ -3,14 +3,16 @@
   /* background-color: rgb(223, 217, 211); */
   padding: 2rem;
   border-radius: 10px;
+  border-radius: 5px;
   background: #e0e0e0;
-  box-shadow: inset 26px 26px 52px #b1b1b1, inset -26px -26px 52px #ffffff;
+  box-shadow:  32px 32px 34px #636363,
+               -32px -32px 34px #ffffff;  
 }
 .sub-footer-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* background-color: aqua; */
+ 
 }
 .box {
   width: 20%;
@@ -20,7 +22,7 @@
   height: 9rem;
   margin-left: 3rem;
 }
-.logo-title {
+.logo-title { 
   margin-top: 2rem;
   text-transform: capitalize;
   margin-left: 1rem;
@@ -29,8 +31,9 @@
 .footer-sub-title {
   text-transform: capitalize;
   text-decoration: solid;
-  text-align: start;
+  /* text-align: start; */
   /* padding-top: 2rem; */
+ 
 }
 .footer-sub-title-contact {
   display: flex;
