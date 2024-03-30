@@ -1,9 +1,9 @@
 import React from 'react'
-import './Enquiryform';
+import './Enquiryform.css';
 
 const Enquiryform = () => {
     return (    
-        <div className='mt-2 mb-2 d-flex justify-content-center'>
+        <div className=' enguiry-container mt-2 mb-2 d-flex justify-content-center'>
             <div className='form-container p-5 neumorphic-input rounded-2'>
                 <h2 className='text-center text-decoration-underline'>Asked Your Query</h2>
                 <form>
