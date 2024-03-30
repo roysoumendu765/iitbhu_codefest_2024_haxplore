@@ -138,24 +138,23 @@ export default function FormSection() {
       
 const rzr_pay_action = (username,email,mobilenum,user_id) => {
     console.log("clicked on rzr");
-    var amount = 10;
     var options = {
       "key": "rzp_test_XbZeljHYPVwHVJ", // Enter the Key ID generated from the Dashboard
-      "amount": amount*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "amount": total*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
       "name": "TempleTicket",
       "description": "Test Transaction",
       "image": bhulogo,
       "handler": function (response){
                     var rzr_pay_id = response.razorpay_payment_id;
-                    alert("response after payment"+ rzr_pay_id);
+                    console.log("response after payment"+ rzr_pay_id);
                     const data = {
                         "user_id" : user_id,
                         "rzr_pay_id" : rzr_pay_id,
-                        "amount" : amount 
+                        "amount" : total 
                     }
-                    console.log(data)
-                    axios.post(`http://localhost:8000/booking/payment`, {user_id, rzr_pay_id, amount})
+                    console.log(data);
+                    axios.post(`http://localhost:8000/booking/payment`, {user_id, rzr_pay_id, total})
                     .then(res => res.data ? sweetAlertSuccess() : "")
                     .catch(err => err && err.message ? sweetAlertError() : "")
 
@@ -167,6 +166,7 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
                     setIdname('');
                     setIdNum('');
                     setNoOfPersons('');
+                    setTotal('');
         
           console.log(response);
       },
@@ -185,13 +185,14 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
   
   var rzp1 = new Razorpay(options);
   rzp1.on('payment.failed', function (response){
-          alert(response.error.code);
-          alert(response.error.description);
-          alert(response.error.source);
-          alert(response.error.step);
-          alert(response.error.reason);
-          alert(response.error.metadata.order_id);
-          alert(response.error.metadata.payment_id);
+    console.log(response.error.description);
+        //   alert(response.error.code);
+        //   alert(response.error.description);
+        //   alert(response.error.source);
+        //   alert(response.error.step);
+        //   alert(response.error.reason);
+        //   alert(response.error.metadata.order_id);
+        //   alert(response.error.metadata.payment_id);
   });
   rzp1.open();
 }
@@ -208,7 +209,7 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
                     
                     <div className="gender">
                     <label htmlFor="gender">Gender </label>
-                    <input  className="gendermale"  type="radio" name="gender" value="male" onChange={handlegender} /> Male
+                    <input  className="gendermale" type="radio" name="gender" value="male" onChange={handlegender} /> Male
                     <input className="genderfemale" type="radio" name="gender" value="female" onChange={handlegender} /> Female
                     <input type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
                     </div>
@@ -227,8 +228,9 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
                     <input className="numberofperson-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
                     <label htmlFor="email">Email Address:&nbsp;</label>
                     <input className="emailInput" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />
-                    <label htmlFor="total" >Total (10rs per person): &nbsp;</label>
-                    <input type="number" placeholder={total} disabled/>
+                    <label htmlFor="total">Total ( 10Rs per person):&nbsp;</label>
+                    <input className="total" type="number" name="total" id="total" value={total} disabled/><br />
+
                     <div className="btn">
                     <button className="submitbtn" type="submit" onClick={sendData}>Buy</button>
                     <button className="Resetbtn" onClick={clearForm}>Reset</button>

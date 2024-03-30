@@ -75,6 +75,8 @@
   font-size: 22px;
   margin-left: 15.9rem;
   padding-left: 10px;
+  min-width: 262px;
+  color: black;
 }
 .idnumber-input {
   border-radius: 5px;
@@ -92,11 +94,19 @@
   margin-left: 10.8rem;
   padding-left: 10px;
 }
-.emailInput {
+.emailInput{
   border-radius: 5px;
   text-align: left;
   font-size: 22px;
   margin-left: 13.6rem;
+  margin-top: 1rem;
+  padding-left: 10px;
+}
+.total {
+  border-radius: 5px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 9.4rem;
   margin-top: 1rem;
   padding-left: 10px;
 }
