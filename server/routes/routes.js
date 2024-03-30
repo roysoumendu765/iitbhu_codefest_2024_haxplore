@@ -41,7 +41,7 @@ router.post('/payment', async (req,res) => {
             {
                 userid: req.body.user_id,
                 razorid: req.body.rzr_pay_id,
-                amount: parseInt(req.body.amount)
+                amount: parseInt(req.body.total)
             }
         )
         const paymentSaved = await paydata.save();
