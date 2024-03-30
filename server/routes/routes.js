@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const passwordStr = ""
 const router = express.Router();
 
 const Model = require('../models/models');
@@ -81,6 +83,14 @@ router.post('/payment', async (req,res) => {
         res.status(200).json({message: `Payment Successful`})
     } catch(error){
         res.status(500).json({message: `Payment Failed: ${error.message}`})
+    }
+})
+
+router.post('/login', (req,res) => {
+    try {
+        
+    } catch (error) {
+        
     }
 })
 
