@@ -258,7 +258,11 @@ export default function FormSection() {
                             <div className="row mb-1">
                                 <label htmlFor="id-name" required className="neumorphic-label col-sm-4 col-form-label">Id Name: &nbsp;</label>
                                 <div className="col-sm-8">
-                                    <input className="form-control idInput neumorphic-input" placeholder="eg:Aadhar,Passport..." type="text" id="id-name" value={idname} onChange={handleIdName} /><br />
+                                    <select className="form-control idInput neumorphic-input" id="id-name" value={idname} onChange={handleIdName}>
+                                        <option selected value="Aadhar Card"></option>
+                                        <option value="Pan Card"></option>
+                                        <option value="Other"></option>
+                                    </select>
                                 </div>
                             </div>
                             <div className="row mb-1">
