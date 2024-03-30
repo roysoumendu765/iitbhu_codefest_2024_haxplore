@@ -27,7 +27,7 @@ const List = (props) => {
         <li className='list-items'>Gender:  {listitems && listitems[0] && listitems[0].gender ? listitems[0].gender : ""}</li>
         <li className='list-items'>Mobile:  {listitems && listitems[0] && listitems[0].mobile ? listitems[0].mobile : ""}</li>
         <li className='list-items'>Email:  {listitems && listitems[0] && listitems[0].email ? listitems[0].email : ""}</li>
-        <li className='list-items'>Number Of Tickets:  {listitems && listitems[0] && listitems[0].no_of_person ? listitems[0].no_of_person : ""}</li>
+        <li className='list-items'>Number Of Persons:  {listitems && listitems[0] && listitems[0].no_of_person ? listitems[0].no_of_person : ""}</li>
       </ul>
       <div className="qrcode-section">
         <QRCode className='qrcode-img'
