@@ -59,7 +59,7 @@ const Footer = () => {
                 <TiMessages />
               </p>
               <span>
-                <a href="#"> Send Your Enquery</a>
+                <a href="#"> Send Your Enquiry</a>
               </span>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-sub-title-media">
-              <a href="#">Login/Register</a>
+              <a href="#">Admin Login</a>
             </div>
 
           </div>
