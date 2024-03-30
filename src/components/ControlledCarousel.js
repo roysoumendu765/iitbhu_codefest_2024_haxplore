@@ -5,6 +5,7 @@ import vt_image1 from './assests/5.jpg'
 import vt_image2 from './assests/2.jpg'
 import vt_image3 from './assests/3.jpg'
 import vt_image4 from './assests/4.webp'
+import vt_image5 from './assests/6.jpg'
 import './ControlledCarousel.css';
 
 export default function ControlledCarousel() {
@@ -16,28 +17,35 @@ export default function ControlledCarousel() {
           <img className="image" src={vt_image1}  alt={imagetext}/>
           <Carousel.Caption>
             <h3>BHU VishwaNath Temple</h3>
-            <p>Sample Text for Image One</p>
+            <p>Only way of Peace</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={2000}>
+        <Carousel.Item interval={1500}>
+          <img className="image" src={vt_image5}  alt={imagetext}/>
+          <Carousel.Caption>
+            <h3>BHU VishwaNath Temple</h3>
+            <p>We are the same in the End</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={1500}>
           <img className='image' src={vt_image2} alt={imagetext}/>
           <Carousel.Caption>
             <h3>BHU VishwaNath Temple</h3>
-            <p>Sample Text for Image Two</p>
+            <p>We cannot Take anything with us in the End</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={2000}>
+        <Carousel.Item interval={1500}>
           <img className='image' src={vt_image3} alt={imagetext}/>
           <Carousel.Caption>
             <h3>BHU VishwaNath Temple</h3>
-            <p>Sample Text for Image Two</p>
+            <p>Both  Heaven and Hell is present here.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={2000}>
+        <Carousel.Item interval={1500}>
           <img className='image' src={vt_image4} alt={imagetext}/>
           <Carousel.Caption>
             <h3>BHU VishwaNath Temple</h3>
-            <p>Sample Text for Image Two</p>
+            <p>10 pointers or 6 pointers all will go to Manikarnika</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
