@@ -4,8 +4,7 @@
   padding: 2rem;
   border-radius: 10px;
   background: #e0e0e0;
-  box-shadow: inset 26px 26px 52px #b1b1b1,
-              inset -26px -26px 52px #ffffff;
+  box-shadow: inset 26px 26px 52px #b1b1b1, inset -26px -26px 52px #ffffff;
 }
 .sub-footer-container {
   display: flex;
@@ -13,13 +12,8 @@
   justify-content: space-around;
   /* background-color: aqua; */
 }
-@media (max-width: 480) {
-  .box{
-    width:100%;
-   }
-}
-.box{
- width:20%;
+.box {
+  width: 20%;
 }
 .img-title-section img {
   width: 7rem;
@@ -36,16 +30,16 @@
   text-transform: capitalize;
   text-decoration: solid;
   text-align: start;
-  padding-top: 1rem;
+  /* padding-top: 2rem; */
 }
 .footer-sub-title-contact {
   display: flex;
   text-decoration: none;
 }
-.footer-sub-title-contact p:first-of-type{
-font-size:25px;
-margin-top:-8px;
-margin-right: 10px;
+.footer-sub-title-contact p:first-of-type {
+  font-size: 25px;
+  margin-top: -8px;
+  margin-right: 10px;
 }
 .contact-sub-icon {
   font-size: 20px;
@@ -69,7 +63,7 @@ a {
   margin-top: 0.5rem;
 }
 .footer-sub-title-policy {
-  display: flex;
+  /* display: flex; */
   gap: 10px;
   text-decoration: none;
   margin-top: 0.5rem;
@@ -88,7 +82,7 @@ a {
 }
 .policy-sub-title-content {
   margin-top: 2rem;
-  margin-left: 7rem;
+  
 }
 .contact-sub-title-content {
   padding-top: 1rem;
@@ -107,17 +101,17 @@ a {
 }
 .copyright {
   display: flex;
-  
+
   gap: 5px;
   text-decoration: solid;
   font-weight: 700;
   justify-content: center;
 }
-.copyright p{
+.copyright p {
   color: black;
 }
 
-.Login{
+.Login {
   background-color: yellow;
   padding: 5px;
 }

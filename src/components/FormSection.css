@@ -201,3 +201,8 @@
 .information{
   border: 1px solid black;
 }
+
+#id-name, #id-name option{
+  color:black;
+
+}
