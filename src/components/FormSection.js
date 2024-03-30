@@ -198,47 +198,77 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
 }
 
     return (
-        <div>
-            <div className="formContainer">
-            <fieldset>
-                <legend className="heading">Personal Details</legend>
+        <div className="container px-0 my-4" style={{'height':'auto!important'}}>
+  <div className="col-12 col-md-6 mx-auto formContainer">
+    <fieldset className="neumorphic-fieldset">
+      <legend className="heading text-center mb-3">Personal Details</legend>
 
-                <form className="form-section" >
-                    <label  htmlFor="name" required>Name: &nbsp;</label>
-                    <input className="nameInput" placeholder="Enter Your Name" type="text" id="name" minLength="4" value={username} onChange={handlename} required /><br />
-                    
-                    <div className="gender">
-                    <label htmlFor="gender">Gender </label>
-                    <input  className="gendermale" type="radio" name="gender" value="male" onChange={handlegender} /> Male
-                    <input className="genderfemale" type="radio" name="gender" value="female" onChange={handlegender} /> Female
-                    <input type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
-                    </div>
-                    <label htmlFor="age" >Age: &nbsp;</label>
-                    <input className="ageInput" type="number" name="age" maxLength="2" id="age" value={age} onChange={handleAge} />
-                    <br />
-                    <label htmlFor="mobile">Mobile: &nbsp;</label>
-                    <input className="mobileInput" placeholder="(+91) 0000000000" type="number" name="amobilege" id="mobile" maxLength="10" minLength="10" value={mobilenum} onChange={handleMobile} />
+      <form className="form-section">
+            <div className="row ">
+                <label htmlFor="name" required className="neumorphic-label col-sm-4 col-form-label">Name: &nbsp;</label>
+                <div className="col-sm-8">
+                    <input className="form-control nameInput neumorphic-input" placeholder="Enter Your Name" type="text" id="name" minLength="4" value={username} onChange={handlename} required /><br />
+                </div>
+            </div>
+            <div className="row mb-3">
+                <label htmlFor="gender" required className="neumorphic-label col-sm-4 col-form-label">Gender: &nbsp;</label>
+                <div className="col-sm-8 d-flex align-items-center">
+                <input className="gendermale me-2" type="radio" name="gender" value="male" onChange={handlegender} /> Male
+                <input className="genderfemale ms-4 me-2" type="radio" name="gender" value="female" onChange={handlegender} /> Female
+                <input className="ms-4 me-2" type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
+                </div>
+            </div>
+            <div className="row mb-1">
+                <label htmlFor="age" required className="neumorphic-label col-sm-4 col-form-label">Age: &nbsp;</label>
+                <div className="col-sm-8">
+                <input className="form-control ageInput neumorphic-input" type="number" name="age" maxLength="2" id="age" value={age} onChange={handleAge} /><br />
+                </div>
+            </div>
+            <div className="row mb-1">
+                <label htmlFor="mobile" required className="neumorphic-label col-sm-4 col-form-label">Mobile: &nbsp;</label>
+                <div className="col-sm-8">
+                    <input className="form-control mobileInput neumorphic-input" placeholder="(+91) 0000000000" type="number" name="amobilege" id="mobile" maxLength="10" minLength="10" value={mobilenum} onChange={handleMobile} /><br />
+                </div>
+            </div>
+            <div className="row mb-1">
+                <label  htmlFor="id-name" required className="neumorphic-label col-sm-4 col-form-label">Id Name: &nbsp;</label>
+                <div className="col-sm-8">
+                    <input className="form-control idInput neumorphic-input" placeholder="eg:Aadhar,Passport..." type="text" id="id-name" value={idname} onChange={handleIdName} /><br />
+                </div>
+            </div>
+            <div className="row mb-1">
+                <label  htmlFor="id-no" required className="neumorphic-label col-sm-4 col-form-label">Id Number: &nbsp;</label>
+                <div className="col-sm-8">
+                    <input className="form-control idnumber-input neumorphic-input" placeholder="0000-0000-0000-0000" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
+                </div>
+            </div>
+            <div className="row mb-1">
+                <label htmlFor="noOfPerson" required className="neumorphic-label col-sm-4 col-form-label">Number Of Persons: &nbsp;</label>
+                <div className="col-sm-8">
+                <input className="form-control numberofperson-input neumorphic-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
+                </div>
+            </div>
+            <div className="row mb-1">
+                <label htmlFor="email" required className="neumorphic-label col-sm-4 col-form-label">Email Address: &nbsp;</label>
+                <div className="col-sm-8">
+                    <input className="form-control emailInput neumorphic-input" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />                </div>
+            </div>
+            <div className="row mb-1">
+                <label htmlFor="total" required className="neumorphic-label col-sm-4 col-form-label">Total (10Rs per person): &nbsp;</label>
+                <div className="col-sm-8">
+                <input className="form-control total neumorphic-input" type="number" name="total" id="total" value={total} disabled/><br />
+                </div>
+            </div>
+            <div className="row mb-1">
+                <div className="col-12 d-flex justify-content-around">
+                    <button className="submitbtn neumorphic-button" type="submit" onClick={sendData}>Buy</button>
+                    <button className="Resetbtn neumorphic-button" onClick={clearForm}>Reset</button>
+                </div>
+            </div>
+      </form>
+    </fieldset>
+  </div>
+</div>
 
-                    <br />
-                    <label htmlFor="id-name" required>Id Name: &nbsp;</label>
-                    <input className="idInput" placeholder="eg:Aadhar,Passport..." type="text" id="id-name" value={idname} onChange={handleIdName} /><br />
-                    <label htmlFor="id-no" required>Id Number: &nbsp;</label>
-                    <input className="idnumber-input" placeholder="0000-0000-0000-0000" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
-                    <label htmlFor="noOfPerson" required>Number Of Persons: &nbsp;</label>
-                    <input className="numberofperson-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
-                    <label htmlFor="email">Email Address:&nbsp;</label>
-                    <input className="emailInput" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />
-                    <label htmlFor="total">Total ( 10Rs per person):&nbsp;</label>
-                    <input className="total" type="number" name="total" id="total" value={total} disabled/><br />
-
-                    <div className="btn">
-                    <button className="submitbtn" type="submit" onClick={sendData}>Buy</button>
-                    <button className="Resetbtn" onClick={clearForm}>Reset</button>
-                    </div>
-                </form>
-
-            </fieldset>
-        </div>
-        </div>
     );
 }

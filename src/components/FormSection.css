@@ -7,18 +7,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e6f0ee;
 }
-.form-section {
-  border: 3px dotted black;
+.formContainer  div,.formContainer  input{
+  border: none;
+}
+/* .form-section {
   margin-bottom: 2rem;
   padding: 1rem;
   width: 60rem;
   border-radius: 10px;
-  background-color: #e1d9d9;
-  -webkit-box-shadow: 1px -2px 16px 14px rgba(145, 132, 145, 1);
-  -moz-box-shadow: 1px -2px 16px 14px rgba(145, 132, 145, 1);
-  box-shadow: 1px -2px 16px 14px rgba(145, 132, 145, 1);
 }
 .form-section label {
   margin-left: 10rem;
@@ -134,22 +131,70 @@
   font-size: 1.1rem;
   line-height: 2;
   border-radius: 10px;
+} */
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formContainer {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: inset 6px 6px 12px #b0b0b0,
+              inset -6px -6px 12px #ffffff;
+}
+
+.neumorphic-fieldset {
   border: none;
-  background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black, inset 2px 3px 5px rgb(0 0 0 / 30%),
-    inset -2px -3px 5px rgb(255 255 255 / 50%);
+  width: 100%;
+  margin-inline: 2rem;
 }
 
-.submitbtn:focus,
-.Resetbtn:hover {
-  background-image: linear-gradient(to bottom right, #888, #eee);
+.heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.submitbtn:active {
-  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgb(0 0 0 / 30%),
-    inset -2px -3px 5px rgb(255 255 255 / 50%);
+.neumorphic-label {
+  margin-bottom: 5px;
 }
-.Resetbtn:active {
-  box-shadow: inset 2px 2px 1px black, inset 2px 3px 5px rgb(0 0 0 / 30%),
-    inset -2px -3px 5px rgb(255 255 255 / 50%);
+
+.neumorphic-input {
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  box-shadow: inset 5px 5px 10px #b0b0b0,
+              inset -5px -5px 10px #ffffff;
+}
+
+.neumorphic-radio {
+  margin-bottom: 10px;
+}
+
+.neumorphic-button {
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px #b0b0b0,
+              -5px -5px 10px #ffffff;
+}
+
+.neumorphic-button:hover {
+  transform: translateY(2px);
+}
+
+.neumorphic-button:active {
+  transform: translateY(4px);
 }
