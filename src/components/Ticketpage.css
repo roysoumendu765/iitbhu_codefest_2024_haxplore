@@ -1,5 +1,5 @@
 .ticketpage {
-    border: 1px solid red;
+    border: 1px solid #ccc;
 
 }
 
@@ -15,16 +15,17 @@
 .clichere{
     font-size: 2rem;
 }
-.click{
-    padding: 1rem;
-    border: 2px solid orange;
-    border-radius: 3rem;
-    box-shadow: 0 0 3px 3px rgb(234, 100, 18);
-    margin-top: 2rem;
-    font-size: 2rem;
-}
 
-
+.neumorphic-button {
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px #b0b0b0,
+                -5px -5px 10px #ffffff;
+  }
 
 /* col-12 col-md-6 mx-auto my-5 d-flex justify-content-around align-items-center */
 /* mx-2 mt-3'  style={{boxShadow: '1px 1px 5px 1px orange',borderRadius: '20px',background: 'antiquewhite'}} */
