@@ -47,7 +47,10 @@ const updateStatus = (objId) => {
 
 router.get('/getAll', async (req,res) => {
     try {
-        const data = await Model.find();
+        const data = await Model.aggregate([
+            {$match: {status: false}},
+            {$group: {_id: null, no_of_person : {$sum: "no_of_person"}}}
+        ])
         res.status(200).json(data);
     } catch (error) {
         res.status(500).json({message: error.message})
