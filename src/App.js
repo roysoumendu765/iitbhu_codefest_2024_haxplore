@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import FormSection from "./components/FormSection";
 import Footer from './components/Footer';
 import Header from './components/Header';
+import ViewTicketPage from './components/ViewTicketPage'
 import AdminLogin from './components/AdminLogin';
 import SignupLogin from './components/SignupLogin';
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/login' element={<AdminLogin/>}/>
         <Route path='/Signup' element={<SignupLogin/>}/>
         <Route path='/buy' element={<FormSection />} />
+        <Route path='/viewTicket' element={<ViewTicketPage/>} />
       </Routes>
       <div>
         <Footer/>
