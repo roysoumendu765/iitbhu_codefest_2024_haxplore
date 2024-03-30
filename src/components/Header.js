@@ -11,8 +11,8 @@ const Header = () => {
         <h1>TEMPLE TICKET SYSTEM</h1>
       </div>
       <div className='headerRight'>
-        <Link to="/Login" className='buy'>Login</Link>
-        <Link to="/Signup" className='buy'>Signup</Link>
+        <Link to="/" className='buy'>Contact</Link>
+        <Link to="/" className='buy'>View Tickets</Link>
         <Link to="/buy" className="buy">Buy Tickets</Link>
       </div>
     </div>
