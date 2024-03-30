@@ -220,13 +220,14 @@ export default function FormSection() {
     return (
         <div className="wrapper">
             <div className="information">
-                
+
 
             </div>
             <div className="container px-0 my-4" style={{ 'height': 'auto' }}>
                 <div className="col-12 col-md-6 mx-auto formContainer">
                     <fieldset className="neumorphic-fieldset">
                         <legend className="heading text-center mb-3">Personal Details</legend>
+                        <legend className="heading text-center mb-3">Approx Waiting Time: {waiting}</legend>
                         <form className="form-section">
                             <div className="row ">
                                 <label htmlFor="name" required className="neumorphic-label col-sm-4 col-form-label">Name: &nbsp;</label>
