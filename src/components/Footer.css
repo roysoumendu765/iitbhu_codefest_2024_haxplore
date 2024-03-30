@@ -11,11 +11,11 @@
 .sub-footer-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
  
 }
 .box {
-  width: 20%;
+  /* width: 20%; */
 }
 .img-title-section img {
   width: 7rem;
@@ -31,6 +31,7 @@
 .footer-sub-title {
   text-transform: capitalize;
   text-decoration: solid;
+  font-weight: bold;
   /* text-align: start; */
   /* padding-top: 2rem; */
  
@@ -74,7 +75,7 @@ a {
 .paymentcard {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 .paymentcard img {
   height: 4rem;
@@ -94,9 +95,8 @@ a {
 .media-icon {
   display: flex;
   flex-direction: row;
-  justify-content: end;
   gap: 2rem;
-  /* margin-right: 1rem; */
+  margin-top: 3rem;
 }
 .media-icon span a {
   font-size: 35px;
