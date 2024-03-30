@@ -25,6 +25,15 @@ router.post('/book', async (req, res) => {
     }
 })
 
+router.get('/getAll', async (req,res) => {
+    try {
+        const data = await Model.find();
+        res.status(200).json();
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+
 router.get('/getData/:idnum', async (req,res) => {
     try {
         const data = await Model.find({idnum: req.params.idnum});
