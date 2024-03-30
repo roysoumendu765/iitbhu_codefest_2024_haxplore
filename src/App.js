@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import AdminLogin from './components/AdminLogin';
 import SignupLogin from './components/SignupLogin';
+import Enquiryform from './components/Enquiryform';
 function App() {
   return (
     <div>
@@ -19,6 +20,8 @@ function App() {
         <Route path='/login' element={<AdminLogin/>}/>
         <Route path='/Signup' element={<SignupLogin/>}/>
         <Route path='/buy' element={<FormSection />} />
+        <Route path='/enquiryfrom' element={<Enquiryform />} />
+        
       </Routes>
       <div>
         <Footer/>

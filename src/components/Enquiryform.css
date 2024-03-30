@@ -1,0 +1,14 @@
+.neumorphic-label-enquiry {
+  margin-bottom: 5px;
+}
+
+.neumorphic-input-enquiry,
+.neumorphic-input-enquiry:focus {
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  box-shadow: inset 5px 5px 10px #b0b0b0, inset -5px -5px 10px #ffffff;
+}
+
