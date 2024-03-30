@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className='header'>
+    <div className='header roboto-medium'>
       <div className="heading">
-        <h1>TEMPLE TICKET SYSTEM</h1>
+        <div className='header-icon'></div>
+        <h1 className='header-heading galada-regular'>Ticket System</h1>
       </div>
       <div className='headerRight'>
         <Link to="/" className='buy'>Home</Link>

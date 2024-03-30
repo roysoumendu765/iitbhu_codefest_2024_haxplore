@@ -1,8 +1,11 @@
 import React from 'react'
 
 const DashBoard = (props) => {
+
   return (
-    <div>DashBoard</div>
+    <div>
+        
+    </div>
   )
 }
 

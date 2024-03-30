@@ -1,60 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    
 }
-
 .header {
-    
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between;
     align-items: center;
     color: white;
-    /* background-color: rgb(3, 122, 140); */
-    background-color: rgb(20, 154, 132);
-    /* background-color:rgba(145, 132, 145, 1); */
-    height: 3.5rem;
+    background-color: #02031f;
+    height: 5rem;
     width: 100%;
-
 }
-
+.heading {
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.header-icon{
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 4px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background-image: url('./assests/header-icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.galada-regular {
+    font-family: "Galada", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
 h1 {
     margin-left: 2rem;
-    /* text-shadow: 2px 3px 3px rgb(255, 255, 255); */
+    margin-top: 1.5rem;
     font-weight: bold;
 }
-
 .buy {
-    /* margin-right: 0.5rem; */
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    display: flex;
+    color: white;
     cursor: pointer;
     padding: 0.5rem;
-
 }
-
 .buy:hover {
-    /* scale: 1rem; */
-    color: rgb(194, 194, 194);
-    border-bottom: 1px solid rgb(255, 255, 255);
+    color: gold;
+    line-height: 1rem;
+    text-decoration: underline;
+    opacity: 0.5;
 }
 
 .headerRight {
     display: flex;
     margin-right: 2rem;
-    /* border-right: 1px solid white; */
+    align-items: center;
+    height: inherit;
 }
-
-/* .loginSignup{
-    display: flex;
-    border: 2px solid rgb(244, 239, 239);
-    padding: 5px;
-    gap: 2px;
-}
-.Login{
-    background-color: yellow;
-    padding: 7px;
-  }
-.SignUp{
-    background-color: rgb(14, 127, 55);
-    padding: 7px;
-} */
