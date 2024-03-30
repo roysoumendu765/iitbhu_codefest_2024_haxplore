@@ -257,6 +257,7 @@ export default function FormSection() {
                                         <option value="aadharCard">Aadhar Card</option>
                                         <option value="panCard">Pan Card</option>
                                         <option value="other">Voter Card</option>
+                                        <option value="other">Passport</option>
                                         <option value="other">Others</option>
                                     </select>
                                 </div>

@@ -2,7 +2,8 @@ import { CgMail } from "react-icons/cg";
 import { IoMdContact } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { TiMessages } from "react-icons/ti";
-import { TbPointFilled } from "react-icons/tb";
+import { Link } from "react-router-dom";
+// import { TbPointFilled } from "react-icons/tb";
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { BsYoutube } from "react-icons/bs";
@@ -17,6 +18,7 @@ import bhulogo from "./assests/bhulogo.png";
 import React from "react";
 import "./Footer.css";
 import { IconContext } from "react-icons";
+import Enquiryform from "./Enquiryform";
 
 const Footer = () => {
   return (
@@ -58,7 +60,8 @@ const Footer = () => {
                 <TiMessages />
               </p>
               <span>
-                <a href="#"> Send Your Enquery</a>
+                
+                <Link to="enquiryfrom" className="sendEnquiry   ms-sm-0 ps-sm-0 ">Send Enquiry</Link>
               </span>
             </div>
           </div>
@@ -75,8 +78,8 @@ const Footer = () => {
               <a href="#">Temple Services</a>
             </div>
 
-            <div className="footer-sub-title-media footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
-              <a href="#">Login/Register</a>
+            <div className="footer-sub-title-media ms-5 ps-3 ms-sm-0 ps-sm-0">
+              <a href="#">Admin Login</a>
             </div>
 
           </div>
