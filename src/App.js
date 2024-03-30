@@ -6,7 +6,6 @@ import FormSection from "./components/FormSection";
 import Footer from './components/Footer';
 import Header from './components/Header';
 import AdminLogin from './components/AdminLogin';
-import SignupLogin from './components/SignupLogin';
 function App() {
   return (
     <div>
@@ -17,7 +16,6 @@ function App() {
       <Routes>
         <Route path="/" element={<MainApp />} />
         <Route path='/login' element={<AdminLogin/>}/>
-        <Route path='/Signup' element={<SignupLogin/>}/>
         <Route path='/buy' element={<FormSection />} />
       </Routes>
       <div>

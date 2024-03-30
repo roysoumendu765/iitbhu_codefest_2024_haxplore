@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import SignupLogin from './SignupLogin';
 import AdminLogin from './AdminLogin';
 
 const Header = () => {
