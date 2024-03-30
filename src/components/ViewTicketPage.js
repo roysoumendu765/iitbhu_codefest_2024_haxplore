@@ -2,51 +2,51 @@ import React, { useState } from "react";
 import './ViewTicketPage.css';
 import List from "./List";
 import Swal from 'sweetalert2';
+import axios from "axios";
 
 
 
 const ViewTicketPage = () => {
     const [listStatus, setListStatus] = useState(false);
     const [idNo, setIdNo] = useState('');
+
     const clickhandler = () => {
         // console.log("hello");
-        idNo === '' ? sweetError() : setListStatus(true);
+        idNo === '' ? sweetError("ID Number can't be empty...") : setListStatus(true);
     }
-    const sweetError = () => {
+    const sweetError = (msg) => {
         Swal.fire({
             title: "Error",
-            text: "ID Number can't be empty...",
+            text: msg,
             icon: "error"
         })
     }
-    const sweetSuccess=()=>{
-    Swal.fire({
-        title: "Success",
-        text: "Ticket Generated SuccessFully.",
-        icon: "success"
-    })
+    const sweetSuccess = () => {
+        Swal.fire({
+            title: "Success",
+            text: "Ticket Generated SuccessFully.",
+            icon: "success"
+        })
     }
     const changeHandler = (e) => {
         setIdNo(e.target.value);
-        // console.log(idNo);
+        console.log(idNo);
+        console.log(e.target.value);
     }
     const refresh = () => {
         setListStatus(false);
         setIdNo('');
     }
+    // const checkData = () => {
+    //     // return axios.get(`http://localhost:8000/booking/getData/${idNo}`)
+    //     //     .then(res=> console.log(res.data)
+    //     //         // res.data.length==0 ? false : true
+    //     //         )
+    //     //     .catch(sweetError("Network Error"));
+    // }
     return (
         <div className="outerMost">
             <div className="containerV">
-                <div className="selectContainerV">
-                    <label htmlFor="idnum">View Tickets By: &nbsp;</label>
-                    <select name="idnum" id="idnum">
-                        <option value="aadhaarCard">Aadhaar Card</option>
-                        <option value="panCard">Pan Card</option>
-                        <option value="voterCard">Voter Card</option>
-                        <option value="number">Mobile Number</option>
-                        <option value=""></option>
-                    </select>
-                </div>
                 <div className="inputContainerV">
                     <label htmlFor="">ID Number: &nbsp;</label>
                     <input type="text" value={idNo} onChange={changeHandler} />
