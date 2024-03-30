@@ -12,7 +12,7 @@ export default function FormSection() {
     const [age, setAge] = useState('');
     const [email, setEmail] = useState('');
     const [mobilenum, setMobileNum] = useState('');
-    const [idname, setIdname] = useState('');
+    const [idname, setIdname] = useState('aadharCard');
     const [idnum, setIdNum] = useState('');
     const [noOfPersons, setNoOfPersons] = useState('');
     const [Razorpay] = useRazorpay();
@@ -105,7 +105,7 @@ export default function FormSection() {
         setAge(0);
         setEmail('');
         setMobileNum(0);
-        setIdname('');
+        setIdname('aadharCard');
         setIdNum('');
         setNoOfPersons('');
     }
@@ -218,13 +218,8 @@ export default function FormSection() {
     }, []);
 
     return (
-        <div className="wrapper">
-            <div className="information">
-
-
-            </div>
-            <div className="container px-0 my-4" style={{ 'height': 'auto' }}>
-                <div className="col-12 col-md-6 mx-auto formContainer">
+            <div className="container px-0 mb-4" style={{ 'height': 'auto' }}>
+                <div className="col-12 col-lg-6 mx-auto formContainer">
                     <fieldset className="neumorphic-fieldset">
                         <legend className="heading text-center mb-3">Personal Details</legend>
                         <legend className="heading text-center mb-3">Approx Waiting Time: {waiting}</legend>
@@ -258,13 +253,18 @@ export default function FormSection() {
                             <div className="row mb-1">
                                 <label htmlFor="id-name" required className="neumorphic-label col-sm-4 col-form-label">Id Name: &nbsp;</label>
                                 <div className="col-sm-8">
-                                    <input className="form-control idInput neumorphic-input" placeholder="eg:Aadhar,Passport..." type="text" id="id-name" value={idname} onChange={handleIdName} /><br />
+                                    <select className="form-control idInput neumorphic-input" id="id-name" value={idname} onChange={handleIdName}>
+                                        <option value="aadharCard">Aadhar Card</option>
+                                        <option value="panCard">Pan Card</option>
+                                        <option value="other">Voter Card</option>
+                                        <option value="other">Others</option>
+                                    </select>
                                 </div>
                             </div>
                             <div className="row mb-1">
                                 <label htmlFor="id-no" required className="neumorphic-label col-sm-4 col-form-label">Id Number: &nbsp;</label>
                                 <div className="col-sm-8">
-                                    <input className="form-control idnumber-input neumorphic-input" placeholder="0000-0000-0000-0000" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
+                                    <input className="form-control idnumber-input neumorphic-input" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
                                 </div>
                             </div>
                             <div className="row mb-1">
@@ -294,6 +294,5 @@ export default function FormSection() {
                     </fieldset>
                 </div>
             </div>
-        </div>
     );
 }

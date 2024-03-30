@@ -21,22 +21,21 @@ import { IconContext } from "react-icons";
 const Footer = () => {
   return (
     <div className="Footer-Container d-flex flex-column ">
-
-      <div className="sub-footer-container card d-flex flex-column flex-md-row  justify-content-around ">
+ {/* d-flex flex-column flex-lg-row  justify-content-around  */}
+      <div className="sub-footer-container row">
         {/* main title and logo */}
 
-        <div className="img-title-section card-img-top card box">
+        <div className="img-title-section col-12 col-sm-6 col-md-auto my-4 my-sm-0 text-center text-sm-auto">
           <img  src={bhulogo} alt="logo" />
-          <h2 className="logo-title">Footer Temple</h2>
         </div>
 
         {/* Contact info Area */}
 
-        <div className="card-body bg-warning box">
-          <h3 className="footer-sub-title">Contact info</h3>
+        <div className=" col-12 col-sm-6 col-md-auto my-4 my-sm-0  box ">
+          <h3 className="footer-sub-title footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">Contact info</h3>
 
           <div className="contact-sub-title-content">
-            <div className="footer-sub-title-contact">
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0 ">
               <p>
                 <IoMdContact />
               </p>
@@ -45,7 +44,7 @@ const Footer = () => {
               </span>
             </div>
 
-            <div className="footer-sub-title-contact">
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <p>
                 <CgWebsite />
               </p>
@@ -54,7 +53,7 @@ const Footer = () => {
               </span>
             </div>
 
-            <div className="footer-sub-title-contact">
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <p>
                 <TiMessages />
               </p>
@@ -67,85 +66,76 @@ const Footer = () => {
 
         {/* Media Link Area */}
 
-        <div className=" bg-primary box">
-          <h3 className="footer-sub-title">Media Links</h3>
+        <div className="col-12 col-sm-6 col-md-auto my-4 my-sm-0   box">
+          <h3 className="footer-sub-title footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">Media Links</h3>
 
           <div className="media-sub-title-content">
-            <div className="footer-sub-title-media">
-             
+
+            <div className="footer-sub-title-media footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#">Temple Services</a>
             </div>
 
-            <div className="footer-sub-title-media">
-              
+            <div className="footer-sub-title-media footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#">Login/Register</a>
             </div>
+
           </div>
         </div>
 
         {/* Policy Info */}
 
-        <div className="  bg-danger box">
-          <h3 className="footer-sub-title">Policy Info</h3>
+        <div className="col-12 col-sm-6 col-md-auto my-4 my-sm-0   box">
+
+          <h3 className="footer-sub-title footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">Policy Info</h3>
 
           <div className="policy-sub-title-content">
-            <div className="footer-sub-title-policy">
-             
+
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#"> How we Work</a>
             </div>
 
-            <div className="footer-sub-title-contact">
-              
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#"> Privacy Policy</a>
             </div>
 
-            <div className="footer-sub-title-contact">
-             
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#"> Term of Use</a>
             </div>
 
-            <div className="footer-sub-title-contact">
-             
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#"> FAQ</a>
             </div>
 
-            <div className="footer-sub-title-contact">
-              
+            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#"> Cancellation & Refund Policy</a>
             </div>
+
           </div>
         </div>
 
         {/* Payment gatyway link */}
 
-        <div className=" card-body bg-success box">
-          <h3 className="footer-sub-title">Payment Partner</h3>
+        <div className="col-12 col-sm-6 col-md-auto my-4 my-sm-0  box">
+          <h3 className="footer-sub-title text-start footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">Payment Partner</h3>
 
-          <div className="paymentcard">
-            <img src={Razorpay} alt="Razorpaylogo"/>
+          <div className="paymentcard footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
+            <img src={Razorpay} style={{'transform':'scale(2.3)'}} alt="Razorpaylogo"/>
+            <img src={visa} alt="visalogo" className="ms-3"/>
+          </div>
+          <div className="paymentcard footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
+          <img src={paypal} alt="paypallogo" className="me-4"/>
+            <img src={upi}  alt="upilogo" style={{'transform':'scale(0.8)'}} />
           </div>
 
-          <div className="paymentcard">
-            <img src={paypal} alt="paypallogo" />
-          </div>
-
-          <div className="paymentcard">
-            <img src={upi}  alt="upilogo"/>
-          </div>
-
-          <div className="paymentcard">
-            <img src={visa} alt="visalogo" />
+          <div className="media-icon footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
+            <span><a href="#">< BsTwitterX /></a></span>
+            <span><a href="#"><FaFacebookF /></a></span>
+            <span><a href="#"><BsYoutube /></a></span>
+            <span><a href="#"><FaSquareInstagram /></a></span>
           </div>
         </div>
       </div>
 
-      <div className="media-icon">
-          <span><a href="#">< BsTwitterX /></a></span>
-          <span><a href="#"><FaFacebookF /></a></span>
-          <span><a href="#"><BsYoutube /></a></span>
-          <span><a href="#"><FaSquareInstagram /></a></span>
-          
-      </div>
       <div className="copyright">
          <p>Temple</p><span><MdCopyright /></span><p>2024. All Rights Reserved.</p>
         </div>

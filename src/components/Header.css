@@ -1,10 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    
 }
-.header{
+
+.header {
+    
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-between;
     align-items: center;
     color: white;
@@ -15,18 +18,33 @@
     width: 100%;
 
 }
-h1{
+
+h1 {
     margin-left: 2rem;
     /* text-shadow: 2px 3px 3px rgb(255, 255, 255); */
     font-weight: bold;
 }
-.buy{
-    margin-right: 2rem;
+
+.buy {
+    /* margin-right: 0.5rem; */
     cursor: pointer;
-    border: 2px solid rgb(255, 255, 255);
     padding: 0.5rem;
+
 }
-.loginSignup{
+
+.buy:hover {
+    /* scale: 1rem; */
+    color: rgb(194, 194, 194);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.headerRight {
+    display: flex;
+    margin-right: 2rem;
+    /* border-right: 1px solid white; */
+}
+
+/* .loginSignup{
     display: flex;
     border: 2px solid rgb(244, 239, 239);
     padding: 5px;
@@ -39,4 +57,4 @@ h1{
 .SignUp{
     background-color: rgb(14, 127, 55);
     padding: 7px;
-}
+} */
