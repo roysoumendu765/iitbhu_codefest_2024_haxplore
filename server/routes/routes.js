@@ -15,15 +15,35 @@ router.post('/book', async (req, res) => {
         email: req.body.email,
         idname: req.body.idname,
         idnum: req.body.idnum,
-        no_of_person: req.body.noOfPersons
+        no_of_person: req.body.noOfPersons,
+        status: true
     })
     try {
         const dataSaved = await data.save();
+        updateStatus(dataSaved._id)
         res.status(200).json({id: dataSaved._id, message: `Tickets Generated Successfully.`});
     } catch (error) {
         res.status(400).json({message: error.message});
     }
 })
+
+const updateStatus = (objId) => {
+    console.log(objId)
+    // let modifiedstr = `ObjectId('${objId}')`
+    // console.log(modifiedstr)
+    setTimeout( async () => {
+        try {
+            const result = await Model.findById(objId);
+            if(result){
+                result.status = false;
+                await result.save();
+                console.log(`Status Updated`)
+            }
+        } catch (error) {
+            console.log(`Error in updating status: ${error.message}`)
+        }
+    }, 2 * 60 * 1000);
+}
 
 router.get('/getAll', async (req,res) => {
     try {

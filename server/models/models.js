@@ -32,6 +32,10 @@ const userSchema = new mongoose.Schema({
     no_of_person:{
         required: true,
         type: Number
+    },
+    status:{
+        required: true,
+        type: Boolean
     }    
 });
 

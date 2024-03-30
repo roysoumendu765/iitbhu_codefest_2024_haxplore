@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const username = "abcdefgh";
 const password = "abcdefgh";
-const uri = `mongodb+srv://abcdefgh:${password}@cluster0.jpoyoge.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://${username}:${password}@cluster0.jpoyoge.mongodb.net/`;
 
 const connect = async () => {
     try {
