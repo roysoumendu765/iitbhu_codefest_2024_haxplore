@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <div className="Footer-Container d-flex flex-column ">
 
-      <div className="sub-footer-container card d-flex flex-column flex-md-row  justify-content-around ">
+      <div className="sub-footer-container  d-flex flex-column flex-md-row  justify-content-around ">
         {/* main title and logo */}
 
         <div className="img-title-section ">
@@ -32,7 +32,7 @@ const Footer = () => {
 
         {/* Contact info Area */}
 
-        <div className=" card-body bg-warning box">
+        <div className=" card-body  box">
           <h3 className="footer-sub-title">Contact info</h3>
 
           <div className="contact-sub-title-content">
@@ -67,7 +67,7 @@ const Footer = () => {
 
         {/* Media Link Area */}
 
-        <div className=" card-body bg-primary box">
+        <div className=" card-body  box">
           <h3 className="footer-sub-title">Media Links</h3>
 
           <div className="media-sub-title-content">
@@ -85,7 +85,7 @@ const Footer = () => {
 
         {/* Policy Info */}
 
-        <div className=" card-body bg-danger box">
+        <div className=" card-body  box">
 
           <h3 className="footer-sub-title">Policy Info</h3>
 
@@ -116,7 +116,7 @@ const Footer = () => {
 
         {/* Payment gatyway link */}
 
-        <div className=" card-body bg-success box">
+        <div className=" card-body box">
           <h3 className="footer-sub-title">Payment Partner</h3>
 
           <div className="paymentcard">
