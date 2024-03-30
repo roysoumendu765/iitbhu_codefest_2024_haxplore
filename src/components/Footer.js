@@ -42,7 +42,7 @@ const Footer = () => {
                 <IoMdContact />
               </p>
               <span >
-                <a href="#"> Contact Us</a>
+              <Link to="enquiryfrom" className="sendEnquiry   ms-sm-0 ps-sm-0 ">Contact Us</Link>
               </span>
             </div>
 
@@ -79,7 +79,8 @@ const Footer = () => {
             </div>
 
             <div className="footer-sub-title-media ms-5 ps-3 ms-sm-0 ps-sm-0">
-              <a href="#">Admin Login</a>
+            <Link to="Adminlogin" className="sendEnquiry   ms-sm-0 ps-sm-0 ">Admin Login</Link>
+
             </div>
 
           </div>

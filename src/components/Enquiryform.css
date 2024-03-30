@@ -1,4 +1,5 @@
-.neumorphic-label-enquiry {
+
+.neumorphic-label-enqury {
   margin-bottom: 5px;
 }
 
@@ -10,5 +11,8 @@
   padding: 8px 12px;
   margin-bottom: 10px;
   box-shadow: inset 5px 5px 10px #b0b0b0, inset -5px -5px 10px #ffffff;
+}
+.enguiry-container{
+  background: url('./assests/enquiry.jpeg');
 }
 
