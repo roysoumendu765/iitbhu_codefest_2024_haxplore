@@ -25,14 +25,14 @@ const Footer = () => {
       <div className="sub-footer-container card d-flex flex-column flex-md-row  justify-content-around ">
         {/* main title and logo */}
 
-        <div className="img-title-section card-img-top card box">
+        <div className="img-title-section ">
           <img  src={bhulogo} alt="logo" />
           <h2 className="logo-title">Footer Temple</h2>
         </div>
 
         {/* Contact info Area */}
 
-        <div className="card-body bg-warning box">
+        <div className=" card-body bg-warning box">
           <h3 className="footer-sub-title">Contact info</h3>
 
           <div className="contact-sub-title-content">
@@ -67,52 +67,50 @@ const Footer = () => {
 
         {/* Media Link Area */}
 
-        <div className=" bg-primary box">
+        <div className=" card-body bg-primary box">
           <h3 className="footer-sub-title">Media Links</h3>
 
           <div className="media-sub-title-content">
+
             <div className="footer-sub-title-media">
-             
               <a href="#">Temple Services</a>
             </div>
 
             <div className="footer-sub-title-media">
-              
               <a href="#">Login/Register</a>
             </div>
+
           </div>
         </div>
 
         {/* Policy Info */}
 
-        <div className="  bg-danger box">
+        <div className=" card-body bg-danger box">
+
           <h3 className="footer-sub-title">Policy Info</h3>
 
           <div className="policy-sub-title-content">
-            <div className="footer-sub-title-policy">
-             
+
+            <div className="footer-sub-title-contact">
               <a href="#"> How we Work</a>
             </div>
 
             <div className="footer-sub-title-contact">
-              
               <a href="#"> Privacy Policy</a>
             </div>
 
             <div className="footer-sub-title-contact">
-             
               <a href="#"> Term of Use</a>
             </div>
 
             <div className="footer-sub-title-contact">
-             
               <a href="#"> FAQ</a>
             </div>
 
             <div className="footer-sub-title-contact">
-              
               <a href="#"> Cancellation & Refund Policy</a>
             </div>
+
           </div>
         </div>
 
@@ -136,6 +134,7 @@ const Footer = () => {
           <div className="paymentcard">
             <img src={visa} alt="visalogo" />
           </div>
+
         </div>
       </div>
 
