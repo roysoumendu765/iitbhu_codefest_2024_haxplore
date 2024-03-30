@@ -219,10 +219,6 @@ export default function FormSection() {
 
     return (
         <div className="wrapper">
-            <div className="information">
-
-
-            </div>
             <div className="container px-0 my-4" style={{ 'height': 'auto' }}>
                 <div className="col-12 col-md-6 mx-auto formContainer">
                     <fieldset className="neumorphic-fieldset">
@@ -259,16 +255,17 @@ export default function FormSection() {
                                 <label htmlFor="id-name" required className="neumorphic-label col-sm-4 col-form-label">Id Name: &nbsp;</label>
                                 <div className="col-sm-8">
                                     <select className="form-control idInput neumorphic-input" id="id-name" value={idname} onChange={handleIdName}>
-                                        <option selected value="Aadhar Card"></option>
-                                        <option value="Pan Card"></option>
-                                        <option value="Other"></option>
+                                        <option selected value="aadharCard">Aadhar Card</option>
+                                        <option value="panCard">Pan Card</option>
+                                        <option value="other">Voter Card</option>
+                                        <option value="other">Others</option>
                                     </select>
                                 </div>
                             </div>
                             <div className="row mb-1">
                                 <label htmlFor="id-no" required className="neumorphic-label col-sm-4 col-form-label">Id Number: &nbsp;</label>
                                 <div className="col-sm-8">
-                                    <input className="form-control idnumber-input neumorphic-input" placeholder="0000-0000-0000-0000" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
+                                    <input className="form-control idnumber-input neumorphic-input" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
                                 </div>
                             </div>
                             <div className="row mb-1">
