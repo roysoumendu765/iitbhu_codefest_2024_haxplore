@@ -147,7 +147,7 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
       "image": bhulogo,
       "handler": function (response){
                     var rzr_pay_id = response.razorpay_payment_id;
-                    alert("response after payment"+ rzr_pay_id);
+                    console.log("response after payment"+ rzr_pay_id);
                     const data = {
                         "user_id" : user_id,
                         "rzr_pay_id" : rzr_pay_id,
@@ -185,13 +185,14 @@ const rzr_pay_action = (username,email,mobilenum,user_id) => {
   
   var rzp1 = new Razorpay(options);
   rzp1.on('payment.failed', function (response){
-          alert(response.error.code);
-          alert(response.error.description);
-          alert(response.error.source);
-          alert(response.error.step);
-          alert(response.error.reason);
-          alert(response.error.metadata.order_id);
-          alert(response.error.metadata.payment_id);
+    console.log(response.error.description);
+        //   alert(response.error.code);
+        //   alert(response.error.description);
+        //   alert(response.error.source);
+        //   alert(response.error.step);
+        //   alert(response.error.reason);
+        //   alert(response.error.metadata.order_id);
+        //   alert(response.error.metadata.payment_id);
   });
   rzp1.open();
 }
