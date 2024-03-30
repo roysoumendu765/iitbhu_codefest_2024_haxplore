@@ -198,3 +198,6 @@
 .neumorphic-button:active {
   transform: translateY(4px);
 }
+.information{
+  border: 1px solid black;
+}
