@@ -36,3 +36,7 @@ The Temple Ticketing System is a web-based platform designed to streamline the p
 - Contact the team in case of any issue
 - Admin login and dashboard for realtime data access
 - Estimate and Schedule time slots
+
+# Admin Credentials for Admin Portal
+- Username: Admin123@gmail.com
+- Password: Admin123
