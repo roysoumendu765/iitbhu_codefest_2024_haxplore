@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 // import AdminLogin from './AdminLogin';
 
 const Header = () => {
+  
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  console.log(isMobile)
   return (
       <div className='header roboto-medium'>
       <div className="heading">
