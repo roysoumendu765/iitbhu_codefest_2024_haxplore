@@ -49,4 +49,5 @@ box-shadow:  18px 18px 36px #b29999,
 .img{
   border-radius: 20px;
   filter: drop-shadow(2px 4px 6px black);
+  max-height: 300px;
 }
