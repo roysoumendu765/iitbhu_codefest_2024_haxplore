@@ -1,10 +1,13 @@
 import React from 'react'
 import './Enquiryform.css';
 
-const Enquiryform = () => {
+const Enquiryform = (props) => {
+
+
     return (    
         <div className=' enguiry-container  mb-2 d-flex justify-content-center'>
             <div className='form-container w-50 mt-2 p-5 neumorphic-input rounded-2'>
+
                 <h2 className='text-center text-decoration-underline'>Asked Your Query</h2>
                 <form>
                     <div class="form-group">
