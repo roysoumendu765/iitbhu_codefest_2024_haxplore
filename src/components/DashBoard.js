@@ -8,6 +8,7 @@ import {useNavigate} from 'react-router-dom';
 const DashBoard = (props) => {
 
   const navigate = useNavigate();
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const [listdetails, setListDetails] = useState([]);
   const requestAll = () => {
     axios.get(`http://localhost:8000/booking/getAll`)
@@ -44,6 +45,7 @@ const DashBoard = (props) => {
       <div className='container mt-2'>
         <table className="table">
           <thead>
+            { !isMobile &&
             <tr>
               <th scope="col">Name</th>
               <th scope="col">Gender</th>
@@ -52,7 +54,16 @@ const DashBoard = (props) => {
               <th scope="col">Mobile Number</th>
               <th scope="col">Number Of Tickets</th>
               <th scope="col">Status</th>
-            </tr>
+            </tr> }
+            {
+              isMobile && 
+              <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Mobile</th>
+              <th scope="col">Tickets</th>
+              <th scope="col">Status</th>
+              </tr>
+            }
           </thead>
           <tr>
             <td colspan="8">
@@ -62,7 +73,7 @@ const DashBoard = (props) => {
             </td>
           </tr>
           <tbody>
-          {listdetails.map((item) => (
+          {!isMobile && listdetails.map((item) => (
             <tr key={item._id}>
               <td>{item.name}</td>
               <td>{item.gender}</td>
@@ -73,7 +84,17 @@ const DashBoard = (props) => {
               <td>{item.status === true ? "Not Visited" : "Visited"}</td>
             </tr>
           ))}
-
+          {
+            isMobile &&
+            listdetails.map((item) => (
+              <tr key={item._id}>
+                <td>{item.name}</td>
+                <td>{item.mobile}</td>
+                <td>{item.no_of_person}</td>
+                <td>{item.status === true ? "Not Visited" : "Visited"}</td>
+              </tr>
+            ))
+          }
           </tbody>
         </table>
         <div className='btn-area d-flex justify-content-center mb-3'>

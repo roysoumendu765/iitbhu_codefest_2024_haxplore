@@ -151,7 +151,7 @@ router.post('/sendenquiry', async (req, res) => {
     }
 })
 
-router.patch('/postcount/:idnum', async (req, res) => {
+router.put('/postcount/:idnum', async (req, res) => {
     try {
         const id = req.params.idnum;
         const updateData = {

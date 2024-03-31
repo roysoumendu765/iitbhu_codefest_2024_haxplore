@@ -13,16 +13,16 @@ const AdminLogin=()=>{
 
     const navigate = useNavigate();
 
-    const responseGoogle = (response) => {
-        axios.post('/auth/google', { token: response.tokenId })
-          .then((response) => {
-            console.log(response);
-            // Handle response from backend, e.g., set user session
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      };
+    // const responseGoogle = (response) => {
+    //     axios.post('/auth/google', { token: response.tokenId })
+    //       .then((response) => {
+    //         console.log(response);
+    //         // Handle response from backend, e.g., set user session
+    //       })
+    //       .catch((error) => {
+    //         console.error(error);
+    //       });
+    //   };
 
     const handleUserName = (e) => {
         setUsername(e.target.value);
@@ -74,7 +74,7 @@ const AdminLogin=()=>{
                         <br/>
                         {/* <h4 className='forgot-pwd'><a>Forgot Password?</a></h4> */}
                         <button className='btn-signin' type="submit" onClick={handleSubmit}>Login</button>
-                        <div className='google-btn'>
+                        {/* <div className='google-btn'>
                                 <GoogleLogin
                                     className='google-inner'
                                     clientId="809120775150-ht60064l706empcs0fh5o8i739lnhm22.apps.googleusercontent.com"
@@ -83,7 +83,7 @@ const AdminLogin=()=>{
                                     onFailure={responseGoogle}
                                     cookiePolicy={'single_host_origin'}
                                 />
-                        </div>
+                        </div> */}
                     </form>
                 </div>
                 </div>
