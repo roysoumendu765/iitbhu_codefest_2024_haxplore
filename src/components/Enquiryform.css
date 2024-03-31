@@ -18,3 +18,15 @@
   background: url('./assests/enquiry.jpeg');
   font-family: 'Graduate';
 }
+
+.neumorphic{
+  border: none;
+  font-weight: bold;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px #b0b0b0,
+              -5px -5px 10px #ffffff;
+}

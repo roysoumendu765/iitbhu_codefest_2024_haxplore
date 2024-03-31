@@ -20,7 +20,7 @@ const Enquiryform = () => {
                         <textarea class="neumorphic-input-enguiry form-control mt-1" rows="5"></textarea>
                     </div>
                     <div className="d-flex justify-content-center  mt-2">
-                        <button class="neumorphic-button" type="submit">SUBMIT</button>
+                        <button class="neumorphic" type="submit">SUBMIT</button>
                         {/* btn btn-primary ps-3 pe-3  */}
                     </div>
                 </form>
