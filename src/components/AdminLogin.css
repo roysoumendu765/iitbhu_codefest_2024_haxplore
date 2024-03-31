@@ -58,6 +58,7 @@
     justify-content: center;
     flex-direction: row;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    z-index: -1;
 }
 
 .image-container {
@@ -135,18 +136,20 @@ span.icon-span {
 .form-controls {
     padding-top: 15px;
 }
-.google-inner{
+
+.google-inner {
     font-size: 18px !important;
     color: black !important;
     outline: none !important;
     box-shadow: none !important;
 }
 
- @media (max-width:800px) {
+@media (max-width:800px) {
     .image-container {
         display: none;
     }
-} 
-.login-wrapper{
+}
+
+.login-wrapper {
     border-radius: 20px;
 }
