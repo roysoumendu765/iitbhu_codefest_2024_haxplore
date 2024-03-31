@@ -10,7 +10,7 @@ function CardSection() {
       <div className='main-card-conatiner'>
 
         <div className='card-container-left'>
-          <img className='images-container' src={temple1}  alt="designer" />
+          <img className='images-container' src={temple1} alt="designer" />
           <div className='para-container'><p>भोले नाथ, अनन्त चेतना, अज्ञान के नाशक, और दया का स्वरूप, मैं आपको अपनी विनम्र प्रार्थना समर्पित करता हूँ। जटाधार विशाल केशवाला चंद्रमा और नगर की पवित्र गंगा के साथ, आप दिव्य कृपा के प्रतीक हैं। आपकी तीसरी आँख ज्ञान का प्रतीक है, जो धर्म का मार्ग प्रकाशित करती है। ध्यान और योग के शासक के रूप में, आप हमें आंतरिक शांति और ज्ञान की ओर प्रेरित करते हैं।
 
             ओह, महादेव, परमात्मा, मैं अपनी आत्मिक यात्रा पर आधारित बाधाओं को पार करने के लिए आपकी कृपा की मंगलकामना करता हूँ। मुझे शक्ति प्रदान करें कि संसारिक इच्छाओं को पार कर दिव्य सत्य को अपनाया जा सके। आपकी दिव्य उपस्थिति मेरे मन, शरीर, और आत्मा को शुद्ध करे, जो मुझे जन्म-मृत्यु के चक्र से मुक्ति की ओर ले जाए।
@@ -21,7 +21,7 @@ function CardSection() {
         </div>
 
         <div className='card-container-right '>
-          <img className='images-container' src={temple1} alt="designer"/>
+          <img className='images-container' src={temple1} alt="designer" />
           <div className='para-container'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse

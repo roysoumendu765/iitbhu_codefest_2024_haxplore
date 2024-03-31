@@ -6,7 +6,7 @@ export default function MainApp() {
         <div className="App">
             <div className="main">
                 <Main />
-                <CardSection/>
+                <CardSection />
             </div>
         </div>
     );
