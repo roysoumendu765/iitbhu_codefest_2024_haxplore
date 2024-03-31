@@ -234,3 +234,7 @@
     height: 60px; /* Set height for large screens */
   }
 }
+.requiredSection{
+  color: red;
+  font-size: 0.8rem;
+}
