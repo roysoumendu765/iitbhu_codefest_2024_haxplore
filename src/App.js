@@ -8,6 +8,7 @@ import Header from './components/Header';
 import ViewTicketPage from './components/ViewTicketPage'
 import AdminLogin from './components/AdminLogin';
 import Enquiryform from './components/Enquiryform';
+import DashBoard from './components/DashBoard';
 function App() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
         <Route path='/viewTicket' element={<ViewTicketPage />} />
         <Route path='/enquiryfrom' element={<Enquiryform />} />
         <Route path='/Adminlogin' element={<AdminLogin />} />
+        <Route path='/DashBoard' element={<DashBoard />} />
       </Routes>
       <div>
         <Footer />
