@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Counter.css';
+import axios from 'axios';
 
 const Counter = () => {
   const [visitorCount, setVisitorCount] = useState(0); // Initial visitor count
   const [templeCount, setTempleCount] = useState(0); // Initial temple count
+
+  const check=async()=>{
+    let res= await axios.get('http://localhost:8000/booking/getcount');
+    console.log(res.data);
+}
+
 
   useEffect(() => {
     let currentVisitorCount = 0;
@@ -28,6 +35,7 @@ const Counter = () => {
         clearInterval(interval);
       }
     }, 10); // Update every 10 milliseconds
+    // check();
 
     // Clean up interval on component unmount
     return () => clearInterval(interval);
