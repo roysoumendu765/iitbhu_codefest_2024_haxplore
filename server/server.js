@@ -4,6 +4,7 @@ const port = 8000;
 const app = express();
 const routes = require('./routes/routes');
 const bcrypt = require('bcrypt');
+const cors = require('cors');
 const DB = require('./connection/connection');
 DB();
 

@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className='header roboto-medium'>
+      <div className='col-12'>
+      <div className='header roboto-medium'>
       <div className="heading">
         <div className='header-icon'></div>
         <div className='galada-regular' >
@@ -25,6 +26,7 @@ const Header = () => {
         <GiHamburgerMenu className='hamburgerbtn ' />
       </div>
     </div>
+      </div>
   )
 }
 

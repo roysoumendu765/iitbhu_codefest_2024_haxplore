@@ -11,7 +11,7 @@ import Enquiryform from './components/Enquiryform';
 function App() {
   return (
     <div>
-      <div className="header">
+      <div className="header row">
         <Header />
       </div>
       <Routes>

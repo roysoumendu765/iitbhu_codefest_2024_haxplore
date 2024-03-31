@@ -43,7 +43,7 @@ const DashBoard = (props) => {
         <button className='btn btn-primary' onClick={onLogout}>Logout</button>
       </div>
       <div className='container d-flex justify-content-center mt-2'>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Name</th>

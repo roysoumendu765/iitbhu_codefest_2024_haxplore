@@ -1,10 +1,14 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const router = express.Router();
-
+const cors = require('cors');
+const nodemailer = require('nodemailer');
 const Model = require('../models/models');
 const PaymentModel = require('../models/paymentmodels');
 const loginModel = require('../models/loginmodels');
+const IntegerModel = require('../models/IntegerModel');
+const dotenv = require('dotenv');
+dotenv.config();
 
 router.post('/book', async (req, res) => {
     console.log(req.body)
@@ -101,6 +105,53 @@ router.post('/login', async (req,res) => {
     } catch (error) {
         console.log("Catch Block")
         res.status(500).json({message: 'Internal Server Error'});
+    }
+})
+
+router.post('/sendmail', async (req, res) => {
+    const transport = nodemailer.createTransport("SMTP",{
+        service: 'gmail',
+        auth: {
+            user: 'codinggroup98@gmail.com',
+            pass: 'CodingGroup@456'
+        }
+    })
+    try {
+        const {username, email, subject, query} = req.body;
+        transport.sendMail({
+            from: email,
+            to: process.env.USER_EMAIL,
+            subject: subject,
+            text: query
+        });
+        res.status(200).json({message: "Mail Sent SuccessFully"});
+    } catch (error) {
+        console.log(`Error: ${error}`)
+        res.status(500).json({message: "Error Sending Mail"});
+    }
+})
+
+router.post('/postcount', async (req, res) => {
+    try {
+        const UpdateNum = new IntegerModel({
+            field1: req.body.a,
+            field2: req.body.b,
+            field3: req.body.c,
+        })
+        const NumSaved = await UpdateNum.save();
+        res.status(200).json({message: 'Updated Successfully.'});
+    } catch (error) {
+        console.log(`Error: ${error}`);
+        res.status(500).json({message: 'Server Error'});
+    }
+});
+
+router.get('/getcount', async(req, res) => {
+    try {
+        const NumData = await IntegerModel.find();
+        res.status(200).json({data: NumData, message: 'Data'})
+    } catch (error) {
+        res.status(500).json({message: 'Server Error'})
     }
 })
 
