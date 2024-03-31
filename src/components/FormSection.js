@@ -218,11 +218,11 @@ export default function FormSection() {
     }, []);
 
     return (
-            <div className="container1" >
-                <div className="col-12 col-lg-6 m-5 formContainer">
+            <div className="container1 d-flex flex-column" >
+                    <legend className="heading text-center waiting-time py-2">Approx Waiting Time: {waiting}</legend>
+                <div className="col-12 col-md-6 col-lg-4 formContainer my-4">
                     <fieldset className="neumorphic-fieldset">
-                        <legend className="heading text-center mb-3">Personal Details</legend>
-                        <legend className="heading text-center mb-3">Approx Waiting Time: {waiting}</legend>
+                        <legend className="d-flex justify-content-center heading text-center mb-3 w-100">Personal Details</legend>
                         <form className="form-section">
                             <div className="row ">
                                 <label htmlFor="name" required className="neumorphic-label col-sm-4 col-form-label">Name: &nbsp;</label>
@@ -230,18 +230,18 @@ export default function FormSection() {
                                     <input className="form-control nameInput neumorphic-input" placeholder="Enter Your Name" type="text" id="name" minLength="4" value={username} onChange={handlename} required /><br />
                                 </div>
                             </div>
-                            <div className="row mb-3">
+                            <div className="row ">
                                 <label htmlFor="gender" required className="neumorphic-label col-sm-4 col-form-label">Gender: &nbsp;</label>
                                 <div className="col-sm-8 d-flex align-items-center">
-                                    <input className="gendermale me-2" type="radio" name="gender" value="male" onChange={handlegender} /> Male
-                                    <input className="genderfemale ms-4 me-2" type="radio" name="gender" value="female" onChange={handlegender} /> Female
-                                    <input className="ms-4 me-2" type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
+                                    <input className="gendermale me-2 w-auto" type="radio" name="gender" value="male" onChange={handlegender} /> Male
+                                    <input className="genderfemale ms-4 me-2 w-auto" type="radio" name="gender" value="female" onChange={handlegender} /> Female
+                                    <input className="ms-4 me-2 w-auto" type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
                                 </div>
                             </div>
                             <div className="row mb-1">
                                 <label htmlFor="age" required className="neumorphic-label col-sm-4 col-form-label">Age: &nbsp;</label>
                                 <div className="col-sm-8">
-                                    <input className="form-control ageInput neumorphic-input" type="number" name="age" maxLength="2" id="age" value={age} onChange={handleAge} /><br />
+                                    <input className="form-control ageInput neumorphic-input" type="number" name="age" id="age" value={age} onChange={handleAge} /><br />
                                 </div>
                             </div>
                             <div className="row mb-1">
@@ -269,7 +269,7 @@ export default function FormSection() {
                                 </div>
                             </div>
                             <div className="row mb-1">
-                                <label htmlFor="noOfPerson" required className="neumorphic-label col-sm-4 col-form-label">Number Of Persons: &nbsp;</label>
+                                <label htmlFor="noOfPerson" required className="neumorphic-label col-sm-4 col-form-label">No. Of Persons: &nbsp;</label>
                                 <div className="col-sm-8">
                                     <input className="form-control numberofperson-input neumorphic-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
                                 </div>
@@ -280,7 +280,7 @@ export default function FormSection() {
                                     <input className="form-control emailInput neumorphic-input" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />                </div>
                             </div>
                             <div className="row mb-1">
-                                <label htmlFor="total" required className="neumorphic-label col-sm-4 col-form-label">Total (10Rs per person): &nbsp;</label>
+                                <label htmlFor="total" required className="neumorphic-label col-sm-4 col-form-label">Total: Rs</label>
                                 <div className="col-sm-8">
                                     <input className="form-control total neumorphic-input" type="number" name="total" id="total" value={total} disabled /><br />
                                 </div>
