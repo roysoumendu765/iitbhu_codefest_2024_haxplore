@@ -1,11 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
-import vt_image1 from './assests/5.jpg'
-import vt_image2 from './assests/2.jpg'
+import vt_image1 from './assests/v1.jpeg'
+import vt_image2 from './assests/v2.jpeg'
 import vt_image3 from './assests/3.jpg'
-import vt_image4 from './assests/4.webp'
-import vt_image5 from './assests/6.jpg'
+import vt_image4 from './assests/Designer (2).png'
+import vt_image5 from './assests/v3.jpeg'
 import vt_image6 from './assests/Designer.png'
 import './ControlledCarousel.css';
 

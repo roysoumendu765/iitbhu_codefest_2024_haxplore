@@ -10,12 +10,12 @@ const Main = () => {
             <div className='col-12 carousel'>
                 <ControlledCarousel />
             </div>
-                <div className="col-12 counter">
-                    <Counter />
-                </div>
-                <div className='col-12 ticketpage'>
-                    <Ticketpage />
-                </div>
+            <div className="col-12 counter">
+                <Counter />
+            </div>
+            <div className='col-12 ticketpage'>
+                <Ticketpage />
+            </div>
         </div>
     )
 }
