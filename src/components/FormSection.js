@@ -280,7 +280,7 @@ export default function FormSection() {
                                     <input className="form-control emailInput neumorphic-input" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />                </div>
                             </div>
                             <div className="row mb-1">
-                                <label htmlFor="total" required className="neumorphic-label col-sm-4 col-form-label">Total: Rs</label>
+                                <label htmlFor="total" required className="neumorphic-label col-sm-4 col-form-label">Total: (in Rupees)</label>
                                 <div className="col-sm-8">
                                     <input className="form-control total neumorphic-input" type="number" name="total" id="total" value={total} disabled /><br />
                                 </div>
