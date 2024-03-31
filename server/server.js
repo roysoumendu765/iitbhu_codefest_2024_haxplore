@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/booking',routes);
+app.use(cors());
 
 const createAdmin = async (AdminCreds) => {
     try {
