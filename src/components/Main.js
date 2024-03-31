@@ -10,10 +10,10 @@ const Main = () => {
             <div className='col-12 carousel'>
                 <ControlledCarousel />
             </div>
-                <div className="counter">
+                <div className="col-12 counter">
                     <Counter />
                 </div>
-                <div className='ticketpage'>
+                <div className='col-12 ticketpage'>
                     <Ticketpage />
                 </div>
         </div>
