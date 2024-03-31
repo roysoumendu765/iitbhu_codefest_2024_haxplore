@@ -8,14 +8,8 @@ import temple4 from './assests/rameshrwram.jpeg'
 
 function CardSection() {
   return (
-<<<<<<< HEAD
-    <div className='row card-container'>
-   
-      <div className='col-12 main-card-container'>
-=======
     <div className='row'>
       <div className='col-10 mx-auto'>
->>>>>>> a0f6af33fa1ed9643329bc37f746f6f263bc8c29
         <div className='row py-3 my-3'>
           <div className='col-12 col-lg-6 my-3 d-flex justify-content-center justify-content-lg-end align-items-center'>
             <img className='img  p-0 w-100' src={temple1} alt="designer" />
