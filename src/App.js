@@ -8,13 +8,13 @@ import Header from './components/Header';
 import ViewTicketPage from './components/ViewTicketPage'
 import AdminLogin from './components/AdminLogin';
 import Enquiryform from './components/Enquiryform';
+import CardSection from './components/CardSection';
 function App() {
   return (
     <div>
       <div className="header">
         <Header />
       </div>
-
       <Routes>
         <Route path="/" element={<MainApp />} />
         <Route path='/login' element={<AdminLogin/>}/>
@@ -24,6 +24,7 @@ function App() {
         <Route path='Adminlogin' element={<AdminLogin/>}/>
       </Routes>
       <div>
+        <CardSection/>
         <Footer/>
       </div>
     </div>
