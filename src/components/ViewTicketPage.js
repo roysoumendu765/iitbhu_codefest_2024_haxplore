@@ -25,7 +25,7 @@ const ViewTicketPage = () => {
     const sweetSuccess = () => {
         Swal.fire({
             title: "Success",
-            text: "Ticket Generated SuccessFully.",
+            text: "Ticket Fetched SuccessFully.",
             icon: "success"
         })
     }
@@ -49,10 +49,6 @@ const ViewTicketPage = () => {
                 // console.log(status);
                 // console.log(listStatus);
                 // return false;
-            } else {
-                console.log(status);
-                console.log(listStatus);
-                // return status;
             }
         } catch (error) {
             sweetError("Network Error");
@@ -63,10 +59,10 @@ const ViewTicketPage = () => {
 
     return (
         <div className="outerMost">
-            <div className="containerV">
-                <div className="inputContainerV">
-                    <label htmlFor="">ID Number: &nbsp;</label>
-                    <input type="text" value={idNo} onChange={changeHandler} />
+            <div className="containerV formContainer my-5">
+                <div className="inputContainerV ">
+                    <label htmlFor="" className="neumorphic-label me-5">ID Number: &nbsp;</label>
+                    <input type="text" className="neumorphic-input" value={idNo} onChange={changeHandler} />
                 </div>
                 <div className="submitButton">
                     <button className="neumorphic-button" onClick={clickhandler}>

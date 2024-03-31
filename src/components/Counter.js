@@ -34,15 +34,22 @@ const Counter = () => {
   }, []);
 
   return (    
-    <div className="row d-flex align-items-center"  style={{'height':'200px'}}>
-      <div className="col-6 d-flex justify-content-center">
+    <div className="row d-flex align-items-center">
+      <div className="col-12 col-md-4 d-flex justify-content-center">
         <div className="card column text-center">
             <p><i className="fa fa-user"></i></p>
             <h3 className="fw-bold"><span id="visitors">{visitorCount}</span>+</h3>
             <p className="fs-4">Visitors</p>
         </div>
       </div>
-      <div className="col-6 d-flex justify-content-center">
+      <div className="col-12 col-md-4 d-flex justify-content-center">
+        <div className="card column text-center">
+            <p><i className="fa fa-user"></i></p>
+            <h3 className="fw-bold"><span id="visitors">{visitorCount}</span>+</h3>
+            <p className="fs-4">Visitors</p>
+        </div>
+      </div>
+      <div className="col-12 col-md-4 d-flex justify-content-center">
         <div className="card column text-center">
             <p><i className="fa fa-user"></i></p>
             <h3 className="fw-bold"><span id="temples">{templeCount}</span>+</h3>

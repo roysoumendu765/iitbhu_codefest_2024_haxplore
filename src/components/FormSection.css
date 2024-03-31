@@ -135,19 +135,22 @@
 
 
 
-.container {
+.container1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 20rem; */
+  width: 100vw;
+  background-image: url(./assests/enquiry.jpeg);
+
 }
 
 .formContainer {
   background-color: #e0e0e0;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 12px 12px 12px #b0b0b0, -5px -5px 12px white;
-}
+  box-shadow:  6px 6px 12px #b0b0b0,
+              -6px -6px 12px #ffffff;}
 
 .neumorphic-fieldset {
   border: none;
@@ -162,7 +165,10 @@
 }
 
 .neumorphic-label {
-  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 1.1rem;
+  white-space: nowrap;
 }
 
 .neumorphic-input,.neumorphic-input:focus {
@@ -181,6 +187,8 @@
 
 .neumorphic-button {
   border: none;
+  font-family: cursive;
+  font-weight: bold;
   background-color: #e0e0e0;
   border-radius: 10px;
   padding: 10px 20px;
@@ -207,4 +215,15 @@
 }
 .options{
   color: black;
+}
+
+.waiting-time{
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  background: #e0e0e0 !important;
+}
+
+.form-section > .row{
+  height: 50px;
 }

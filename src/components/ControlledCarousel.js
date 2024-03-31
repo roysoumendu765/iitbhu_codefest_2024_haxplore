@@ -10,50 +10,46 @@ import vt_image6 from './assests/Designer.png'
 import './ControlledCarousel.css';
 
 export default function ControlledCarousel() {
-  let imagetext="passes";
+  let imagetext = "passes";
   return (
     <div className='carousel'>
       <Carousel>
-      <Carousel.Item interval={1500}>
-          <img className="image" src={vt_image6}  alt={imagetext}/>
-          <Carousel.Caption>
-            <h3>BHU VishwaNath Temple</h3>
-            <p>Only way of Peace</p>
+        <Carousel.Item interval={1500}>
+          <img className="image" src={vt_image6} alt={imagetext} />
+          <Carousel.Caption className='caroCaption'>
+            {/* <h3>BHU VishwaNath Temple</h3> */}
+            <h3>"Peace cannot be kept by force; it can only be achieved by understanding"</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
-          <img className="image" src={vt_image1}  alt={imagetext}/>
-          <Carousel.Caption>
-            <h3>BHU VishwaNath Temple</h3>
-            <p>Only way of Peace</p>
+          <img className="image" src={vt_image1} alt={imagetext} />
+          <Carousel.Caption className='caroCaption'>
+            <h3>"We are the same in the End"</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
-          <img className="image" src={vt_image5}  alt={imagetext}/>
-          <Carousel.Caption>
-            <h3>BHU VishwaNath Temple</h3>
-            <p>We are the same in the End</p>
+          <img className="image" src={vt_image5} alt={imagetext} />
+          <Carousel.Caption className='caroCaption'>
+            <h3>"In the end, all that matters is how much love we shared and the memories we created."</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
-          <img className='image' src={vt_image2} alt={imagetext}/>
-          <Carousel.Caption>
-            <h3>BHU VishwaNath Temple</h3>
-            <p>We cannot Take anything with us in the End</p>
+          <img className='image' src={vt_image2} alt={imagetext} />
+          <Carousel.Caption className='caroCaption'>
+            <h3>"We cannot Take anything with us in the End"</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
-          <img className='image' src={vt_image3} alt={imagetext}/>
-          <Carousel.Caption>
-            <h3>BHU VishwaNath Temple</h3>
-            <p>Both  Heaven and Hell is present here.</p>
+          <img className='image' src={vt_image3} alt={imagetext} />
+          <Carousel.Caption className='caroCaption'>
+            <h3>"Both Heaven and Hell is present here."</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
-          <img className='image' src={vt_image4} alt={imagetext}/>
-          <Carousel.Caption>
-            <h3>BHU VishwaNath Temple</h3>
-            <p>10 pointers or 6 pointers all will go to Manikarnika</p>
+          <img className='image' src={vt_image4} alt={imagetext} />
+          <Carousel.Caption className='caroCaption'>
+            <h3>
+              "Whether it's 10 pointer or 6 pointer, all will lead to Manikarnika."</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
