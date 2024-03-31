@@ -1,11 +1,10 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const passwordStr = ""
 const router = express.Router();
 
 const Model = require('../models/models');
 const PaymentModel = require('../models/paymentmodels');
+const loginModel = require('../models/loginmodels');
 
 router.post('/book', async (req, res) => {
     console.log(req.body)
@@ -31,8 +30,6 @@ router.post('/book', async (req, res) => {
 
 const updateStatus = (objId) => {
     console.log(objId)
-    // let modifiedstr = `ObjectId('${objId}')`
-    // console.log(modifiedstr)
     setTimeout( async () => {
         try {
             const result = await Model.findById(objId);
@@ -86,11 +83,24 @@ router.post('/payment', async (req,res) => {
     }
 })
 
-router.post('/login', (req,res) => {
+router.post('/login', async (req,res) => {
+    console.log("Inside the route")
+    const {username, passwordval} = req.body;
     try {
-        
+        console.log("Try Block")
+        const admin = await loginModel.findOne({username});
+        console.log(admin)
+        if(!admin){
+            res.status(404).json({message: 'Invalid Email Id'});
+        }
+        const comparepwd = bcrypt.compare(passwordval, admin.password);
+        if(!comparepwd){
+            res.status(401).json({message: 'Invalid Password'});
+        }
+        res.status(200).json({message: 'success'});
     } catch (error) {
-        
+        console.log("Catch Block")
+        res.status(500).json({message: 'Internal Server Error'});
     }
 })
 

@@ -3,9 +3,11 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import Header from './Header';
 import Footer from './Footer';
+import {useNavigate} from 'react-router-dom';
 
 const DashBoard = (props) => {
 
+  const navigate = useNavigate();
   const [listdetails, setListDetails] = useState([]);
   const requestAll = () => {
     axios.get(`http://localhost:8000/booking/getAll`)
@@ -20,6 +22,10 @@ const DashBoard = (props) => {
     setListDetails([]);
   }
  
+  const onLogout = () => {
+    navigate('/');
+  }
+
   const Errormsg = () => {
     console.log(listdetails)
     Swal.fire({
@@ -28,14 +34,18 @@ const DashBoard = (props) => {
       icon: "error"
     })
   }
+
   return (
     <>
       <Header />
+      <div>
+        <h2>Welcome Admin!</h2>
+        <button className='btn btn-primary' onClick={onLogout}>Logout</button>
+      </div>
       <div className='container d-flex justify-content-center mt-2'>
         <table class="table">
           <thead>
             <tr>
-            {/* username, gender, age, email, mobilenum, idname, idnum, noOfPersons  */}
               <th scope="col">Name</th>
               <th scope="col">Gender</th>
               <th scope="col">Age</th>

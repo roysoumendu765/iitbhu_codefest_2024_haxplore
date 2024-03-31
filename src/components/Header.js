@@ -11,9 +11,9 @@ const Header = () => {
     <div className='header roboto-medium'>
       <div className="heading">
         <div className='header-icon'></div>
-        <h1 className='header-heading galada-regular' >
+        <div className='galada-regular' >
             Ticket System
-        </h1>
+        </div>
       </div>
       <div className='headerRight'>
         <Link to="/" className='buy'>Home</Link>

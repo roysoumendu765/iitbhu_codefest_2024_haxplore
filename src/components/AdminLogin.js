@@ -4,10 +4,22 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import DashBoard from './DashBoard';
 import { FcGoogle } from "react-icons/fc";
+import { GoogleLogin } from 'react-google-login';
 
 const AdminLogin=()=>{
     const [username, setUsername] = useState('');
     const [passwordval, setPasswordval] = useState('');
+
+    const responseGoogle = (response) => {
+        axios.post('/auth/google', { token: response.tokenId })
+          .then((response) => {
+            console.log(response);
+            // Handle response from backend, e.g., set user session
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      };
 
     const handleUserName = (e) => {
         setUsername(e.target.value);
@@ -20,13 +32,12 @@ const AdminLogin=()=>{
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const headers = {
-            'Content-Type': 'application/json'
-        }
-        axios.post(`http://localhost:8000/booking/login`, {username, passwordval}, {headers})
+        axios.post(`http://localhost:8000/booking/login`, {username, passwordval})
         .then((res) => {
-            if(res.message === "Success"){
-                <DashBoard/>
+            if(res.message === "success"){
+                navigate('/')
+            }else{
+                console.log('Failure')
             }
     }).catch(error => errormsg(error.message))
     }
@@ -41,35 +52,41 @@ const AdminLogin=()=>{
 
     return(
         <>
-        <div className='dummy-line'></div>
-        <div className='main-wrapper'>
-           <div className='second-wrapper'>
-           <div className='header-wrapper graduate-regular'>
-                <h2>Welcome Admin</h2>
-                <h4>Please enter your details</h4>
+            <div className='dummy-line'></div>
+            <div className='main-wrapper'>
+            <div className='second-wrapper'>
+            <div className='header-wrapper graduate-regular'>
+                    <h2>Welcome Admin</h2>
+                    <h4>Please enter your details</h4>
+                </div>
+                <div className='wrapper-sideways'>
+                <div className='image-container'>
+                </div>
+                <div className='login-wrapper alegreya-sans-regular'>
+                    <form className='form-controls'>
+                        <label className='label-text' htmlFor="email">Email</label><br/>
+                        <input className='emailInput' placeholder='Enter your email' name='email' value={username} onChange={handleUserName}/><br/>
+                        <label className='label-text' htmlFor="password">Password</label><br/>
+                        <input className='passwordInput' placeholder='Enter your Password' name='password' value={passwordval} onChange={handlePassword}/>
+                        <br/>
+                        <h4 className='forgot-pwd'><a>Forgot Password?</a></h4>
+                        <button className='btn-signin' type="submit" onClick={handleSubmit}>Login</button>
+                        <div className='google-btn'>
+                                <GoogleLogin
+                                    className='google-inner'
+                                    clientId="809120775150-ht60064l706empcs0fh5o8i739lnhm22.apps.googleusercontent.com"
+                                    buttonText="Login with Google"
+                                    onSuccess={responseGoogle}
+                                    onFailure={responseGoogle}
+                                    cookiePolicy={'single_host_origin'}
+                                />
+                        </div>
+                    </form>
+                </div>
+                </div>
             </div>
-            <div className='wrapper-sideways'>
-            <div className='image-container'>
             </div>
-            <div className='login-wrapper alegreya-sans-regular'>
-                <form className='form-controls'>
-                    <label className='label-text' htmlFor="email">Email</label><br/>
-                    <input className='emailInput' placeholder='Enter your email' name='email' value={username} onChange={handleUserName}/><br/>
-                    <label className='label-text' htmlFor="password">Password</label><br/>
-                    <input className='passwordInput' placeholder='Enter your Password' name='password' value={passwordval} onChange={handlePassword}/>
-                    <br/>
-                    <h4 className='forgot-pwd'><a>Forgot Password?</a></h4>
-                    <button className='btn-signin' type="submit" onClick={handleSubmit}>Login</button>
-                    <div className='google-btn'>
-                        <span className='icon-span'><FcGoogle /></span>
-                        <p>Sign In with Google</p>
-                    </div>
-                </form>
-            </div>
-            </div>
-           </div>
-        </div>
-        <div className='dummy-line'></div>
+            <div className='dummy-line'></div>
         </>
     )
 }
