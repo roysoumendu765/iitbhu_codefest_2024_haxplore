@@ -231,6 +231,10 @@
 /* Media query for large screens */
 @media screen and (min-width: 768px) {
   .form-section > .row {
-    height: 50px; /* Set height for large screens */
+    height: 60px; /* Set height for large screens */
   }
+}
+.requiredSection{
+  color: red;
+  font-size: 0.8rem;
 }

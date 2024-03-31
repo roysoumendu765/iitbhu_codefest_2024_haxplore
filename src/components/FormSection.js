@@ -21,23 +21,31 @@ export default function FormSection() {
 
     // validating form field
     const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
+    // const [isSubmit, setIsSubmit] = useState(false);
 
     const validate = (values) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        if (!values.username) {
-            errors.username = "Username is required!";
+        if (!values.name) {
+            errors.username = " * Username is required!";
+        } else if (values.name.length < 5) {
+            errors.username = " * Length should be greater than 4 characters";
+        } else {
+            errors.username = '';
         }
         if (!values.email) {
-            errors.email = "Email is required!";
+            errors.email = " * Email is required!";
         } else if (!regex.test(values.email)) {
-            errors.email = "This is not a valid email format!";
+            errors.email = " * This is not a valid email format!";
+        } else {
+            errors.email = '';
         }
-        if (!values.mobilenum) {
-            errors.mobilenum = "Mobile Number is required";
-        } else if(values.mobilenum.length < 10) {
-            errors.mobilenum = "Mobile Number must have 10 characters";
+        if (!values.mobile) {
+            errors.mobilenum = " * Mobile Number is required";
+        } else if (values.mobile.length < 10) {
+            errors.mobilenum = " * Mobile Number must have 10 characters";
+        } else {
+            errors.mobilenum = '';
         }
         return errors;
     };
@@ -116,21 +124,26 @@ export default function FormSection() {
         //     setAge('');
         //     return;
         // }
-        axios.post(`http://localhost:8000/booking/book`, { username, gender, age, email, mobilenum, idname, idnum, noOfPersons })
-            .then(res => {
-                console.log(res.data.id);
-                rzr_pay_action(username, email, mobilenum, res.data.id);
-            })
-            .catch(err => err && err.message ? sweetAlertError() : "")
 
-        setName('');
-        setGender('');
-        setAge(0);
-        setEmail('');
-        setMobileNum(0);
-        setIdname('aadharCard');
-        setIdNum('');
-        setNoOfPersons('');
+        setFormErrors(validate(data));
+        // setIsSubmit(true);
+        if (formErrors.username === '' && formErrors.mobilenum === '' && formErrors.email === '') {
+            axios.post(`http://localhost:8000/booking/book`, { username, gender, age, email, mobilenum, idname, idnum, noOfPersons })
+                .then(res => {
+                    console.log(res.data.id);
+                    rzr_pay_action(username, email, mobilenum, res.data.id);
+                })
+                .catch(err => err && err.message ? sweetAlertError() : "")
+
+            setName('');
+            setGender('');
+            setAge(0);
+            setEmail('');
+            setMobileNum(0);
+            setIdname('aadharCard');
+            setIdNum('');
+            setNoOfPersons('');
+        }
     }
 
     const clearForm = () => {
@@ -225,6 +238,10 @@ export default function FormSection() {
     useEffect(() => {
         let sum = 0;
         let totalPeople = 0;
+        // console.log(formErrors);
+        // if (Object.keys(formErrors).length === 0 && isSubmit) {
+        //     console.log(formValues);
+        // }
         axios.get('http://localhost:8000/booking/getAll')
             .then(res => {
                 let data = res.data;
@@ -247,10 +264,13 @@ export default function FormSection() {
                 <fieldset className="neumorphic-fieldset">
                     <legend className="d-flex justify-content-center heading text-center mb-3 w-100">Personal Details</legend>
                     <form className="form-section">
-                        <div className="row ">
+                        <div className="row mb-3">
                             <label htmlFor="name" required className="neumorphic-label col-sm-4 col-form-label">Name: &nbsp;</label>
                             <div className="col-sm-8">
-                                <input className="form-control nameInput neumorphic-input" placeholder="Enter Your Name" type="text" id="name" minLength="4" value={username} onChange={handlename} required /><br />
+                                <input className="form-control nameInput neumorphic-input" placeholder="Enter Your Name" type="text" id="name" minLength="4" value={username} onChange={handlename} required />
+                                <p className="requiredSection">
+                                    {formErrors.username}
+                                </p>
                             </div>
                         </div>
                         <div className="row ">
@@ -258,19 +278,22 @@ export default function FormSection() {
                             <div className="col-sm-8 d-flex align-items-center">
                                 <input className="gendermale me-2 w-auto" type="radio" name="gender" value="male" onChange={handlegender} /> Male
                                 <input className="genderfemale ms-4 me-2 w-auto" type="radio" name="gender" value="female" onChange={handlegender} /> Female
-                                <input className="ms-4 me-2 w-auto" type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;<br />
+                                <input className="ms-4 me-2 w-auto" type="radio" name="gender" value="Others" onChange={handlegender} /> Others&nbsp;
                             </div>
                         </div>
                         <div className="row mb-1">
                             <label htmlFor="age" required className="neumorphic-label col-sm-4 col-form-label">Age: &nbsp;</label>
                             <div className="col-sm-8">
-                                <input className="form-control ageInput neumorphic-input" type="number" name="age" id="age" value={age} onChange={handleAge} /><br />
+                                <input className="form-control ageInput neumorphic-input" type="number" name="age" id="age" value={age} onChange={handleAge} />
                             </div>
                         </div>
-                        <div className="row mb-1">
+                        <div className="row mb-4">
                             <label htmlFor="mobile" required className="neumorphic-label col-sm-4 col-form-label">Mobile: &nbsp;</label>
                             <div className="col-sm-8">
-                                <input className="form-control mobileInput neumorphic-input" placeholder="(+91) 0000000000" type="number" name="amobilege" id="mobile" maxLength="10" minLength="10" value={mobilenum} onChange={handleMobile} /><br />
+                                <input className="form-control mobileInput neumorphic-input" placeholder="(+91) 0000000000" type="number" name="amobilege" id="mobile" maxLength="10" minLength="10" value={mobilenum} onChange={handleMobile} />
+                                <p className="requiredSection">
+                                    {formErrors.mobilenum}
+                                </p>
                             </div>
                         </div>
                         <div className="row mb-1">
@@ -288,24 +311,29 @@ export default function FormSection() {
                         <div className="row mb-1">
                             <label htmlFor="id-no" required className="neumorphic-label col-sm-4 col-form-label">Id Number: &nbsp;</label>
                             <div className="col-sm-8">
-                                <input className="form-control idnumber-input neumorphic-input" type="text" id="id-no" value={idnum} onChange={handleIdNum} /><br />
+                                <input className="form-control idnumber-input neumorphic-input" type="text" id="id-no" value={idnum} onChange={handleIdNum} />
+
                             </div>
                         </div>
                         <div className="row mb-1">
                             <label htmlFor="noOfPerson" required className="neumorphic-label col-sm-4 col-form-label">No. Of Persons: &nbsp;</label>
                             <div className="col-sm-8">
-                                <input className="form-control numberofperson-input neumorphic-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} /><br />
+                                <input className="form-control numberofperson-input neumorphic-input" min={0} type="number" id="noOfPerson" value={noOfPersons} onChange={handlePersons} />
                             </div>
                         </div>
-                        <div className="row mb-1">
+                        <div className="row mb-4">
                             <label htmlFor="email" required className="neumorphic-label col-sm-4 col-form-label">Email Address: &nbsp;</label>
                             <div className="col-sm-8">
-                                <input className="form-control emailInput neumorphic-input" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} /><br />                </div>
+                                <input className="form-control emailInput neumorphic-input" placeholder="abcd@gmail.com" type="email" name="email" id="email" data-validate="email" value={email} onChange={handleEmail} />
+                                <p className="requiredSection">
+                                    {formErrors.email}
+                                </p>
+                            </div>
                         </div>
                         <div className="row mb-1">
                             <label htmlFor="total" required className="neumorphic-label col-sm-4 col-form-label">Total: (in Rupees)</label>
                             <div className="col-sm-8">
-                                <input className="form-control total neumorphic-input" type="number" name="total" id="total" value={total} disabled /><br />
+                                <input className="form-control total neumorphic-input" type="number" name="total" id="total" value={total} disabled />
                             </div>
                         </div>
                         <div className="row mb-1">
