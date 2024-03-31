@@ -141,3 +141,12 @@ span.icon-span {
     outline: none !important;
     box-shadow: none !important;
 }
+
+ @media (max-width:800px) {
+    .image-container {
+        display: none;
+    }
+} 
+.login-wrapper{
+    border-radius: 20px;
+}

@@ -61,7 +61,6 @@ const AdminLogin=()=>{
             <div className='second-wrapper'>
             <div className='header-wrapper graduate-regular'>
                     <h2>Welcome Admin</h2>
-                    <h4>Please enter your details</h4>
                 </div>
                 <div className='wrapper-sideways'>
                 <div className='image-container'>
