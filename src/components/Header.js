@@ -23,6 +23,7 @@ const Header = () => {
         <Link to="/enquiryfrom" className='buy'>Contact</Link>
         <Link to="/viewTicket" className='buy'>View Tickets</Link>
         <Link to="/buy" className="buy">Buy Tickets</Link>
+        <Link to="Adminlogin" className="buy">Admin Login</Link>
       </div>
       <div>
         <GiHamburgerMenu className='hamburgerbtn ' />
