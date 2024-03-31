@@ -18,7 +18,8 @@
 .img-title-section img {
   width: 7rem;
   height: 9rem;
-  margin-left: 3rem;
+  /* transform: scale(); */
+  margin-left: 3rem ;
 }
 .logo-title { 
   margin-top: 2rem;

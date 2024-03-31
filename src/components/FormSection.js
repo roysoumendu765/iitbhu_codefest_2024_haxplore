@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import './FormSection.css';
-import bhulogo from '../components/assests/bhulogo.png';
+import bhulogo from '../components/assests/trupathi.jpeg';
 import useRazorpay from "react-razorpay";
 
 export default function FormSection() {

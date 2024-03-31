@@ -1,15 +1,22 @@
 const mongoose = require('mongoose');
 
-const IntegerSchema = new  mongoose. Schema({
-    field1: {
+const IntegerSchema = new mongoose.Schema({
+    idnumber:{
+        required: true,
         type: Number
     },
-    field2:{
+    one:{
+        required: true,
         type: Number
     },
-    field3:{
+    two:{
+        required: true,
+        type: Number
+    },
+    three:{
+        required: true,
         type: Number
     }
-})
+});
 
 module.exports = mongoose.model("IntegerData", IntegerSchema);

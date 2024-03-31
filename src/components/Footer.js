@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+
 import { CgMail } from "react-icons/cg";
 import { IoMdContact } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
@@ -14,10 +15,11 @@ import Razorpay from "./assests/razorpay.png";
 import upi from "./assests/upi.png";
 import paypal from "./assests/paypallogo.png";
 import visa from "./assests/visa.png";
-import bhulogo from "./assests/bhulogo.png";
+// import bhulogo from "./assests/bhulogo.png";
 import "./Footer.css";
 import { IconContext } from "react-icons";
-import Enquiryform from "./Enquiryform";
+import bhulogo from "./assests/divin pass.png";
+// import Enquiryform from "./Enquiryform";
 
 const Footer = () => {
 
@@ -36,7 +38,7 @@ const ContacUs=()=>{
         {/* main title and logo */}
 
         <div className="img-title-section col-12 col-sm-6 col-md-auto my-4 my-sm-0 text-center text-sm-auto">
-          <img  src={bhulogo} alt="logo" />
+          {/* <img  src={bhulogo} alt="logo" /> */}
         </div>
 
         {/* Contact info Area */}

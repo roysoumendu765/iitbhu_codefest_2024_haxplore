@@ -1,3 +1,14 @@
+.card-container{
+  background-color: #ded2d4;
+  /* background: url(assests/back_piece.jpeg); */
+  /* backdrop-filter: blur(1px); */
+}
+.main-card-container{
+  border-radius: 12px;
+background: linear-gradient(145deg, #dcbdbd, #ffe1e1);
+box-shadow:  18px 18px 36px #b29999,
+             -18px -18px 36px #ffffff;
+}
 .card-container-left {
   height: 70%;
   width: 100%;
@@ -38,4 +49,5 @@
 .img{
   border-radius: 20px;
   filter: drop-shadow(2px 4px 6px black);
+  max-height: 300px;
 }
