@@ -6,6 +6,7 @@ import vt_image2 from './assests/2.jpg'
 import vt_image3 from './assests/3.jpg'
 import vt_image4 from './assests/4.webp'
 import vt_image5 from './assests/6.jpg'
+import vt_image6 from './assests/Designer.png'
 import './ControlledCarousel.css';
 
 export default function ControlledCarousel() {
@@ -13,6 +14,13 @@ export default function ControlledCarousel() {
   return (
     <div className='carousel'>
       <Carousel>
+      <Carousel.Item interval={1500}>
+          <img className="image" src={vt_image6}  alt={imagetext}/>
+          <Carousel.Caption>
+            <h3>BHU VishwaNath Temple</h3>
+            <p>Only way of Peace</p>
+          </Carousel.Caption>
+        </Carousel.Item>
         <Carousel.Item interval={1500}>
           <img className="image" src={vt_image1}  alt={imagetext}/>
           <Carousel.Caption>

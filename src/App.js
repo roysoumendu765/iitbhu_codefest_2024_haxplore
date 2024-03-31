@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import ViewTicketPage from './components/ViewTicketPage'
 import AdminLogin from './components/AdminLogin';
+import Enquiryform from './components/Enquiryform';
 function App() {
   return (
     <div>
@@ -19,6 +20,8 @@ function App() {
         <Route path='/login' element={<AdminLogin/>}/>
         <Route path='/buy' element={<FormSection />} />
         <Route path='/viewTicket' element={<ViewTicketPage/>} />
+        <Route path='/enquiryfrom' element={<Enquiryform/>}/>
+        <Route path='Adminlogin' element={<AdminLogin/>}/>
       </Routes>
       <div>
         <Footer/>

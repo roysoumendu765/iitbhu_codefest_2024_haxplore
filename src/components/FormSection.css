@@ -135,11 +135,14 @@
 
 
 
-.container {
+.container1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 20rem; */
+  width: 100vw;
+  background-image: url(./assests/enquiry.jpeg);
+
 }
 
 .formContainer {

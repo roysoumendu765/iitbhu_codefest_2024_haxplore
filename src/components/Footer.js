@@ -1,3 +1,4 @@
+import React,{useState} from "react";
 import { CgMail } from "react-icons/cg";
 import { IoMdContact } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
@@ -14,13 +15,20 @@ import upi from "./assests/upi.png";
 import paypal from "./assests/paypallogo.png";
 import visa from "./assests/visa.png";
 import bhulogo from "./assests/bhulogo.png";
-
-import React from "react";
 import "./Footer.css";
 import { IconContext } from "react-icons";
 import Enquiryform from "./Enquiryform";
 
 const Footer = () => {
+
+const[contact,setcontact]=useState("");
+
+const ContacUs=()=>{
+  // console.log("Contact us");
+  setcontact("Contact Us");
+}
+
+
   return (
     <div className="Footer-Container d-flex flex-column ">
  {/* d-flex flex-column flex-lg-row  justify-content-around  */}
@@ -42,7 +50,7 @@ const Footer = () => {
                 <IoMdContact />
               </p>
               <span >
-                <a href="#"> Contact Us</a>
+              <Link to="enquiryfrom" onClick={ContacUs} className="sendEnquiry  ms-sm-0 ps-sm-0 ">Contact Us</Link>
               </span>
             </div>
 
@@ -79,7 +87,8 @@ const Footer = () => {
             </div>
 
             <div className="footer-sub-title-media ms-5 ps-3 ms-sm-0 ps-sm-0">
-              <a href="#">Admin Login</a>
+            <Link to="Adminlogin" className="sendEnquiry   ms-sm-0 ps-sm-0 ">Admin Login</Link>
+
             </div>
 
           </div>
