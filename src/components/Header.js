@@ -18,14 +18,14 @@ const Header = () => {
             Ticket System
         </div>
       </div>
-      <div className='headerRight'>
+      {/* <div className='headerRight'>
         <Link to="/" className='buy'>Home</Link>
         <Link to="/enquiryfrom" className='buy'>Contact</Link>
         <Link to="/viewTicket" className='buy'>View Tickets</Link>
         <Link to="/buy" className="buy">Buy Tickets</Link>
-      </div>
+      </div> */}
       <div>
-        <GiHamburgerMenu className='hamburgerbtn ' />
+        <GiHamburgerMenu className='hamburgerbtn text-white' />
       </div>
     </div>
       </div>
