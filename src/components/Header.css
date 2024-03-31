@@ -108,6 +108,7 @@
 @media (max-width:800px) {
     .hamburgerbtn {
         display: block;
+        cursor: pointer;
     }
 
     .galada-regular {

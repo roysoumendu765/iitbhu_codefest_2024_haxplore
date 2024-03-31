@@ -14,7 +14,7 @@ const Header = () => {
   }
 
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  console.log(isMobile)
+  // console.log(isMobile)
   return (
     <div className='trial'>
       <div className='header roboto-medium d-flex  justify-content-between'>

@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(./assests/enquiry.jpeg);
     
     /* background-color: rgb(20, 154, 132); */
 }
