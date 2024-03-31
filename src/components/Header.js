@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { GiHamburgerMenu } from "react-icons/gi";
-// import bhulogo from "./assests/trupathi.jpeg";
+import bhulogo from "./assests/divine pass.png";
 import { Link } from 'react-router-dom';
 // import SignupLogin from './SignupLogin';
 // import AdminLogin from './AdminLogin';
@@ -11,7 +11,7 @@ const Header = () => {
       <div className='header roboto-medium'>
       <div className="heading">
         <div className='header-icon'>
-          {/* <img  src={bhulogo} alt="logo" /> */}
+          <img  src={bhulogo} alt="logo" />
         </div>
         <div className='galada-regular' >
             Divine Pass

@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+
 import { CgMail } from "react-icons/cg";
 import { IoMdContact } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
@@ -17,7 +18,8 @@ import visa from "./assests/visa.png";
 // import bhulogo from "./assests/bhulogo.png";
 import "./Footer.css";
 import { IconContext } from "react-icons";
-import Enquiryform from "./Enquiryform";
+import bhulogo from "./assests/divin pass.png";
+// import Enquiryform from "./Enquiryform";
 
 const Footer = () => {
 
