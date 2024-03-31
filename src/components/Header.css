@@ -12,7 +12,7 @@
     color: white;
     background-color: #02031f;
     height: 5rem;
-    width: 100%;
+    width: 100vw;
 }
 .heading {
     width: 25%;
@@ -67,7 +67,25 @@ h1 {
 
 .headerRight {
     display: flex;
-    margin-right: 2rem;
+    margin-right: -42rem;
     align-items: center;
     height: inherit;
+}
+@media (min-width:390px) {
+    .headerRight {
+        /* display: flex;
+        margin-right: -42rem;
+        align-items: center;
+        height: inherit; */
+        /* display: none; */
+    }
+}
+.hamburgerbtn{
+    display: none;
+}
+
+@media (max-width:390px) {
+    .hamburgerbtn{
+        display: block;
+    }
 }
