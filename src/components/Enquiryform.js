@@ -58,8 +58,8 @@ const Enquiryform = () => {
     }
 
     return (
-        <div className=' enguiry-container  mb-2 d-flex justify-content-center'>
-            <div className='form-container w-50 mt-2 p-5 neumorphic-input rounded-2'>
+        <div className='row enguiry-container  mb-2 d-flex justify-content-center'>
+            <div className='col-11 col-md-6 col-lg-5 mx-auto form-container  mt-2 p-5 neumorphic-input rounded-2'>
                 <h2 className='text-center'>Contact Us...</h2>
                 <form>
                     <div className="form-group">
