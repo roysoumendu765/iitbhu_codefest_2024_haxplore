@@ -3,10 +3,10 @@
   margin-bottom: 5px;
 }
 
-.neumorphic-input-enquiry,
-.neumorphic-input-enquiry:focus {
+.neumorphic-input-enguiry,
+.neumorphic-input-enguiry:focus {
   border: none;
-  background-color: #e0e0e0;
+  background-color: #ddd8d8;
   border-radius: 10px;
   padding: 8px 12px;
   margin-bottom: 10px;
