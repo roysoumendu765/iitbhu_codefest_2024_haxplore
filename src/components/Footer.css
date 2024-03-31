@@ -80,10 +80,10 @@ a {
   width: 8rem;
 }
 .media-sub-title-content {
-  margin-top: 2rem;
+  /* margin-top:1rem; */
 }
 .policy-sub-title-content {
-  margin-top: 2rem;
+  margin-top: 1rem;
   
 }
 .contact-sub-title-content {
@@ -94,7 +94,6 @@ a {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  margin-top: 3rem;
 }
 .media-icon span a {
   font-size: 35px;

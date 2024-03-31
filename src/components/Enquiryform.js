@@ -26,19 +26,20 @@ const Enquiryform = () => {
     }
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        try {
-            await axios.post('http://localhost:8000/book/sendequiry', {username,email,subject,query});
-            sweetAlertSuccess();
-            setUserName('');
-            setUserEmail('');
-            setUserSubject('');
-            setUserQuery('');
-        } catch (error) {
+            axios.post('http://localhost:8000/booking/sendenquiry', {username,email,subject,query})
+            .then((res) => {
+                sweetAlertSuccess();
+                setUserName('');
+                setUserEmail('');
+                setUserSubject('');
+                setUserQuery('');
+            })
+        .catch (error => {
             console.log(`Error: ${error.message}`);
             sweetAlertError();
-        }
+        })
     }
 
     const sweetAlertSuccess = () => {

@@ -108,23 +108,43 @@ router.post('/login', async (req,res) => {
     }
 })
 
-router.post('/sendmail', async (req, res) => {
-    const transport = nodemailer.createTransport("SMTP",{
+router.post('/sendenquiry', async (req, res) => {
+    const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'codinggroup98@gmail.com',
-            pass: 'CodingGroup@456'
+            pass: 'tphe xpsk dxet sanc'
         }
     })
     try {
         const {username, email, subject, query} = req.body;
-        transport.sendMail({
+        await transporter.sendMail({
             from: email,
-            to: process.env.USER_EMAIL,
+            to: 'codinggroup98@gmail.com',
             subject: subject,
             text: query
+        }, (error, info) => {
+            if(error){
+                console.log(error);
+            } else {
+                console.log(info);
+                if(info.response){
+                    transporter.sendMail({
+                        from: 'codinggroup98@gmail.com',
+                        to: email,
+                        subject: 'Thanks for Contacting Us',
+                        text: 'We'/'ll try to resolve your issue as soon as possible.'
+                    }, (error, info) => {
+                        if(error){
+                            console.log(`Error: ${error}`)
+                        } else{
+                            console.log(info.response);
+                        }
+                    })
+                }
+            }
         });
-        res.status(200).json({message: "Mail Sent SuccessFully"});
+        res.status(200).json({message: 'Mail Sent SuccessFully'});
     } catch (error) {
         console.log(`Error: ${error}`)
         res.status(500).json({message: "Error Sending Mail"});
