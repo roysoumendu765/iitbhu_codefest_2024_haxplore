@@ -85,13 +85,13 @@ h1 {
 }
 
 @media (min-width:390px) {
-    .headerRight {
+    /* .headerRight { */
         /* display: flex;
         margin-right: -42rem;
         align-items: center;
         height: inherit; */
         /* display: none; */
-    }
+    /* } */
 }
 
 .hamburgerbtn {
