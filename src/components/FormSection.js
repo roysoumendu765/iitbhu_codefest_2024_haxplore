@@ -220,7 +220,7 @@ export default function FormSection() {
     return (
             <div className="container1 d-flex flex-column" >
                     <legend className="heading text-center waiting-time py-2">Approx Waiting Time: {waiting}</legend>
-                <div className="col-12 col-md-6 col-lg-4 formContainer my-4">
+                <div className="col-12 col-md-6 col-lg-6 formContainer my-4">
                     <fieldset className="neumorphic-fieldset">
                         <legend className="d-flex justify-content-center heading text-center mb-3 w-100">Personal Details</legend>
                         <form className="form-section">
