@@ -15,17 +15,19 @@ const Header = () => {
           <img  src={bhulogo} style={{'width':'50px'}} alt="logo" />
         </div>
         <div className='galada-regular' >
-            Ticket System
+            Divine Pass
         </div>
       </div>
-      <div className='headerRight'>
+      {/* <div className='headerRight'>
         <Link to="/" className='buy'>Home</Link>
         <Link to="/enquiryfrom" className='buy'>Contact</Link>
         <Link to="/viewTicket" className='buy'>View Tickets</Link>
         <Link to="/buy" className="buy">Buy Tickets</Link>
+        <Link to="Adminlogin" className="buy">Admin Login</Link>
       </div>
+      */}
       <div>
-        <GiHamburgerMenu className='hamburgerbtn ' />
+        <GiHamburgerMenu className='hamburgerbtn text-white' />
       </div>
     </div>
       </div>

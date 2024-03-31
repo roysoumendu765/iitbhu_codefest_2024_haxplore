@@ -37,8 +37,9 @@ const AdminLogin=()=>{
 
         axios.post(`http://localhost:8000/booking/login`, {username, passwordval})
         .then((res) => {
-            if(res.message === "success"){
-                navigate('/')
+            console.log(res)
+            if(res.data.message == "success"){
+                navigate('/DashBoard')
             }else{
                 console.log('Failure')
             }
