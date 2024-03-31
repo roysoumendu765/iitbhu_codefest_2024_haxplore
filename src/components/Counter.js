@@ -7,27 +7,26 @@ const Counter = () => {
   const [templeCount, setTempleCount] = useState(0); // Initial temple count
   // let a = 5, b = 6, c = 7;
 
-  // const check = async () => {
-  //   let res = await axios.get('http://localhost:8000/booking/getcount');
-  //   console.log(res.data);
-  // }
-  // const checkPut = async () => {
-  //   // let res = await axios.patch('http://localhost:8000/booking/postcount/1', {
-  //   //   idnumber: 1,
-  //   //   one: 1,
-  //   //   two: 2,
-  //   //   three: 3
-  //   // });
-  //   // console.log(res.data);
-  //   await axios.patch('http://localhost:8000/booking/postcount/1', {
-  //     idnumber: 1,
-  //     one: 1,
-  //     two: 2,
-  //     three: 3
-  //   }).then(res => console.log(res.data))
-  //     .catch(err => console.error(err));
-  //   // console.log(res.data);
-  // }
+  const check = async () => {
+    let res = await axios.get('http://localhost:8000/booking/getcount');
+    console.log(res.data);
+  }
+  const checkPut = async () => {
+    // let res = await axios.patch('http://localhost:8000/booking/postcount/1', {
+    //   idnumber: 1,
+    //   one: 1,
+    //   two: 2,
+    //   three: 3
+    // });
+    // console.log(res.data);
+    // let idnumber = 1
+    // let one = 2
+    // let two = 4
+    // let three = 3
+    // await axios.patch('http://localhost:8000/booking/postcount/1', {idnumber,one,two,three}).then(res => console.log(res.data))
+      // .catch(err => console.error(err));
+    // console.log(res.data);
+  }
 
   useEffect(() => {
     let currentVisitorCount = 0;

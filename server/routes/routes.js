@@ -154,7 +154,12 @@ router.post('/sendenquiry', async (req, res) => {
 router.patch('/postcount/:idnum', async (req, res) => {
     try {
         const id = req.params.idnum;
-        const updateData = req.body;
+        const updateData = {
+            idnumber: req.body.idnumber,
+            one: req.body.one,
+            two: req.body.two,
+            three: req.body.three
+        };
         const options = {new: true};
         const NumSaved = await IntegerModel.findOneAndUpdate({idnumber: id}, updateData, options);
         res.status(200).json({data: NumSaved, message: 'Updated Successfully.'});
