@@ -9,12 +9,12 @@ import temple4 from './assests/rameshrwram.jpeg'
 function CardSection() {
   return (
     <div className='row'>
-      <div className='col-12'>
+      <div className='col-10 mx-auto'>
         <div className='row py-3 my-3'>
-          <div className='col-12 col-lg-6 my-3 d-flex justify-content-center justify-content-lg-center align-items-center'>
-            <img className='img formContainer p-0 w-75' src={temple1} alt="designer" />
+          <div className='col-12 col-lg-6 my-3 d-flex justify-content-center justify-content-lg-end align-items-center'>
+            <img className='img  p-0 w-100' src={temple1} alt="designer" />
           </div>
-          <div className='col-10 col-lg-4 my-3 fw-bold mx-auto' style={{'textAlign':'justify'}}>
+          <div className='col-10 col-lg-6 my-3 fw-bold mx-auto me-lg-auto' style={{'textAlign':'justify'}}>
           <p>भोले नाथ, अनन्त चेतना, अज्ञान के नाशक, और दया का स्वरूप, मैं आपको अपनी विनम्र प्रार्थना समर्पित करता हूँ। जटाधार विशाल केशवाला चंद्रमा और नगर की पवित्र गंगा के साथ, आप दिव्य कृपा के प्रतीक हैं। आपकी तीसरी आँख ज्ञान का प्रतीक है, जो धर्म का मार्ग प्रकाशित करती है। ध्यान और योग के शासक के रूप में, आप हमें आंतरिक शांति और ज्ञान की ओर प्रेरित करते हैं।
 
 ओह, महादेव, परमात्मा, मैं अपनी आत्मिक यात्रा पर आधारित बाधाओं को पार करने के लिए आपकी कृपा की मंगलकामना करता हूँ। मुझे शक्ति प्रदान करें कि संसारिक इच्छाओं को पार कर दिव्य सत्य को अपनाया जा सके। आपकी दिव्य उपस्थिति मेरे मन, शरीर, और आत्मा को शुद्ध करे, जो मुझे जन्म-मृत्यु के चक्र से मुक्ति की ओर ले जाए।
@@ -25,9 +25,9 @@ function CardSection() {
           </div>
         </div>
       </div>
-      <div className='col-12'>
+      <div className='col-10 mx-auto'>
         <div className='row py-3 my-3 d-flex flex-column-reverse flex-lg-row'>
-          <div className='col-10 col-lg-4 my-3 fw-bold mx-auto mx-lg-auto 'style={{'textAlign':'justify'}}>
+          <div className='col-10 col-lg-6 my-3 fw-bold mx-auto mx-md-0'style={{'textAlign':'justify'}}>
           <p>जय माता वैष्णो देवी! आपकी कृपा से हम सभी भक्त धन्य हैं। आपकी पवित्र गुफा में आपका ध्यान करते हुए हम अपनी मनोकामनाओं की पूर्ति के लिए आपकी आशीर्वाद प्रार्थना करते हैं। मां, आप ही हमारी शक्ति, आशा और संगीत हैं। आपके चरणों में हमारा निवास है, और आपकी कृपा से हमें सबकुछ प्राप्त होता है।
 
 मां, हम आपके चरणों में शरण लेते हैं, आपकी कृपा से हमें संतुष्टि, शांति और आनंद प्राप्त होता है। हमें ध्यान में लगाने की शक्ति दें, ताकि हम आपके प्रति अनुभव करें और आपके मार्ग पर चलें।
@@ -36,18 +36,18 @@ function CardSection() {
 
 मां वैष्णो देवी, हम आपकी शक्ति का आभास करते हैं, और आपके चरणों में हमें स्थान प्राप्त होता है। हमें सदैव आपके आशीर्वाद में रहने का आदर्श मिलता है। जय माता दी!</p>
           </div>
-          <div className='col-12 col-lg-6 my-3 d-flex justify-content-around align-items-center'>
-            <img className='img formContainer p-0 w-75' src={temple2} alt="designer" />
+          <div className='col-12 col-lg-6 my-3 d-flex justify-content-start align-items-center'>
+            <img className='img  p-0 w-100' src={temple2} alt="designer" />
           </div>
         </div>
       </div>
 
-      <div className='col-12'>
+      <div className='col-10 mx-auto'>
         <div className='row py-3 my-3'>
-          <div className='col-12 col-lg-6 my-3 d-flex justify-content-center justify-content-lg-center align-items-center'>
-            <img className='img formContainer p-0 w-75' src={temple3} alt="designer" />
+          <div className='col-12 col-lg-6 my-3 d-flex justify-content-center justify-content-lg-end align-items-center'>
+            <img className='img  p-0 w-100' src={temple3} alt="designer" />
           </div>
-          <div className='col-10 col-lg-4 my-3 fw-bold mx-auto' style={{'textAlign':'justify'}}>
+          <div className='col-10 col-lg-6 my-3 fw-bold mx-auto me-lg-auto' style={{'textAlign':'justify'}}>
           <p>गणपति बप्पा मोरया! विघ्नहर्ता गणेश, आपको मेरी विनम्र प्रार्थना समर्पित है। आप हमेशा हर कठिनाई को दूर करते हैं और हमें सफलता की ओर आगे बढ़ने का मार्ग दिखाते हैं। आपकी भक्ति में हम सबका मनोबल और आत्मविश्वास बढ़ाते हैं।
 
 ओम् गणेशाय नमः, आपकी असीम कृपा और आशीर्वाद से हम सभी कार्यों को साधने में सफल होते हैं। आप हमें ज्ञान, बुद्धि और संयम का आदर्श प्रदान करते हैं। हे गणेश, कृपा करके हमें अपनी सुरक्षा में रखें और हमें पापों से मुक्ति दिलाएं।
@@ -58,10 +58,9 @@ function CardSection() {
           </div>
         </div>
       </div>
-
-      <div className='col-12'>
+      <div className='col-10 mx-auto'>
         <div className='row py-3 my-3 d-flex flex-column-reverse flex-lg-row'>
-          <div className='col-10 col-lg-4 my-3 fw-bold mx-auto mx-lg-auto 'style={{'textAlign':'justify'}}>
+          <div className='col-10 col-lg-6 my-3 fw-bold mx-auto mx-md-0'style={{'textAlign':'justify'}}>
           <p>ओम् नमः शिवाय! रामेश्वरम, भगवान शिव के प्रमुख तीर्थ स्थलों में से एक है। यह स्थल भगवान शिव की पूजा और ध्यान के लिए प्रसिद्ध है और हिंदू धर्म के एक प्रमुख धार्मिक यात्रा स्थल के रूप में माना जाता है।
 
 हे महादेव, हम आपकी आदि शक्ति को यहाँ आराधना करते हैं। आपकी कृपा से हम सभी अपने पापों से मुक्ति प्राप्त करते हैं और आपके आशीर्वाद से हमें शांति, सुख, और समृद्धि की प्राप्ति होती है।
@@ -70,8 +69,8 @@ function CardSection() {
 
 हे भगवान, हम आपको सच्चे मन से प्रार्थना करते हैं कि आप हमें सदैव आपके चरणों में स्थिर रखें और हमें धर्म के मार्ग पर चलने की शक्ति प्रदान करें। रामेश्वरम, हम सदैव आपके आशीर्वाद का आभास करते हैं और आपके दिव्य लीला के गुणगान में लीन होते हैं। ओम् नमः शिवाय!</p>
           </div>
-          <div className='col-12 col-lg-6 my-3 d-flex justify-content-around align-items-center'>
-            <img className='img formContainer p-0 w-75 ' src={temple4} alt="designer" />
+          <div className='col-12 col-lg-6 my-3 d-flex justify-content-start align-items-center'>
+            <img className='img  p-0 w-100' src={temple4} alt="designer" />
           </div>
         </div>
       </div>

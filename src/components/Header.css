@@ -44,8 +44,14 @@
     font-weight: 500;
     font-style: normal;
     font-size: 2rem;
-
+    display: block;
 }
+@media (max-width:800px) {
+    .galada-regular {
+        display: none;
+    }
+}
+
 
 .roboto-medium {
     font-family: "Roboto", sans-serif;
@@ -78,7 +84,6 @@ h1 {
 
 .headerRight {
     display: flex;
-    margin-right: -42rem;
     align-items: center;
     height: inherit;
 }
@@ -97,7 +102,7 @@ h1 {
     display: none;
 }
 
-@media (max-width:390px) {
+@media (max-width:800px) {
     .hamburgerbtn {
         display: block;
     }

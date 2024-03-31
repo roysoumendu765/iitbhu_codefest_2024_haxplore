@@ -37,5 +37,5 @@
 }
 .img{
   border-radius: 20px;
-  /* width: 90%; */
+  filter: drop-shadow(2px 4px 6px black);
 }
