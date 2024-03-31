@@ -23,10 +23,10 @@ const Header = () => {
       </div>
       <div className='headerRight d-flex ms-auto'>
         <Link to="/" className='buy'>Home</Link>
-        <Link to="/enquiryfrom" className='buy'>Contact</Link>
-        <Link to="/viewTicket" className='buy'>View Tickets</Link>
         <Link to="/buy" className="buy">Buy Tickets</Link>
+        <Link to="/viewTicket" className='buy'>View Tickets</Link>
         <Link to="Adminlogin" className="buy">Admin Login</Link>
+        <Link to="/enquiryfrom" className='buy'>Contact</Link>
       </div>
       <div className="d-flex " style={{'alignItems': 'center','fontSize': '1.5rem'}}>
         <GiHamburgerMenu className='hamburgerbtn text-white' />
