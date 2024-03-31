@@ -37,7 +37,6 @@ const DashBoard = (props) => {
 
   return (
     <>
-      <Header />
       <div>
         <h2>Welcome Admin!</h2>
         <button className='btn btn-primary' onClick={onLogout}>Logout</button>
@@ -76,7 +75,6 @@ const DashBoard = (props) => {
           <button className='btn btn-primary' onClick={clearAll}>Clear Details</button>
         </div>
       </div>
-      <Footer />
     </>
   )
 }
