@@ -11,4 +11,4 @@ const loginSchema = new mongoose.Schema({
     }
 })
 
-modules.export = mongoose.model("logindata", loginSchema);
+module.exports = mongoose.model("logindata", loginSchema);
