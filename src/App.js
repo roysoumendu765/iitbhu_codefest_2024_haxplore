@@ -21,7 +21,7 @@ function App() {
         <Route path='/buy' element={<FormSection />} />
         <Route path='/viewTicket' element={<ViewTicketPage/>} />
         <Route path='/enquiryfrom' element={<Enquiryform/>}/>
-        <Route path='Adminlogin' element={<AdminLogin/>}/>
+        <Route path='/Adminlogin' element={<AdminLogin/>}/>
       </Routes>
       <div>
         <Footer/>
