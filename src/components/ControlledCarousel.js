@@ -27,31 +27,34 @@ export default function ControlledCarousel() {
           <img className="image" src={vt_image3} alt={imagetext} />
           <Carousel.Caption className='caroCaption'>
             <h3>"We are the same in the End"</h3>
+            <p>Shree Kashi Vishwanath Temple</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
           <img className="image" src={vt_image7} alt={imagetext} />
           <Carousel.Caption className='caroCaption'>
             <h3>"In the end, all that matters is how much love we shared and the memories we created."</h3>
+            <p>Meenakshi Temple</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
           <img className='image' src={vt_image5} alt={imagetext} />
           <Carousel.Caption className='caroCaption'>
             <h3>"We cannot Take anything with us in the End"</h3>
+            <p>Kedarnath Temple</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
           <img className='image' src={vt_image2} alt={imagetext} />
           <Carousel.Caption className='caroCaption'>
             <h3>"Both Heaven and Hell is present here."</h3>
+            <p>Golden Temple</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1500}>
           <img className='image' src={vt_image4} alt={imagetext} />
           <Carousel.Caption className='caroCaption'>
-            <h3>
-              "Whether it's 10 pointer or 6 pointer, all will lead to Manikarnika."</h3>
+            <h3>"Whether it's 10 pointer or 6 pointer, all will lead to Manikarnika."</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

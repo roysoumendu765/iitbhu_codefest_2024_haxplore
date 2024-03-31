@@ -15,7 +15,7 @@ const Header = () => {
           <img  src={bhulogo} style={{'width':'50px'}} alt="logo" />
         </div>
         <div className='galada-regular' >
-            Ticket System
+            Divine Pass
         </div>
       </div>
       <div className='headerRight'>
