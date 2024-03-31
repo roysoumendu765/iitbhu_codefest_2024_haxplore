@@ -237,7 +237,7 @@ export default function FormSection() {
 
     useEffect(() => {
         let sum = 0;
-        let totalPeople = 0;
+        // let totalPeople = 0;
         // console.log(formErrors);
         // if (Object.keys(formErrors).length === 0 && isSubmit) {
         //     console.log(formValues);
@@ -250,7 +250,7 @@ export default function FormSection() {
                     if (data.status === true) {
                         sum++;
                     }
-                    totalPeople++;
+                    // totalPeople++;
                 });
                 // console.log(sum);
                 setWaiting(`${Math.floor(sum / 2) + 1} minutes`);

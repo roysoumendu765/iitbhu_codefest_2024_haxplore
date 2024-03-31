@@ -5,26 +5,39 @@ import axios from 'axios';
 const Counter = () => {
   const [visitorCount, setVisitorCount] = useState(0); // Initial visitor count
   const [templeCount, setTempleCount] = useState(0); // Initial temple count
-  // let a = 5, b = 6, c = 7;
+  const [visitor, setVisitor] = useState(0);
+  const [total, setTotal] = useState(0);
+  let idnumber = 1;
+  let one = 2;
+  let two = 4;
+  let three = 3;
+  let sum = 0;
+  let totalPeople = 0;
+
+  const countTotal = async() => {
+    let totalPeople=0;
+    await axios.get('http://localhost:8000/booking/getAll')
+        .then(res => {
+            let data = res.data;
+            data.forEach(data => {
+                totalPeople++;
+            });
+        }).catch((err) => { console.log(err) });
+        setTotal(totalPeople);
+  }
+
+
 
   const check = async () => {
     let res = await axios.get('http://localhost:8000/booking/getcount');
     console.log(res.data);
+
+    setVisitor(res.data[0].one);
   }
   const checkPut = async () => {
-    // let res = await axios.patch('http://localhost:8000/booking/postcount/1', {
-    //   idnumber: 1,
-    //   one: 1,
-    //   two: 2,
-    //   three: 3
-    // });
-    // console.log(res.data);
-    // let idnumber = 1
-    // let one = 2
-    // let two = 4
-    // let three = 3
-    // await axios.patch('http://localhost:8000/booking/postcount/1', {idnumber,one,two,three}).then(res => console.log(res.data))
-      // .catch(err => console.error(err));
+
+    await axios.put('http://localhost:8000/booking/postcount/1', { idnumber, one, two, three }).then(res => console.log(res.data))
+      .catch(err => console.error(err));
     // console.log(res.data);
   }
 
@@ -52,10 +65,10 @@ const Counter = () => {
       }
     }, 10); // Update every 10 milliseconds
     // check();
-    // checkPut();
+    checkPut();
 
     // Clean up interval on component unmount
-    return () => clearInterval(interval);
+    return () => {clearInterval(interval);}
   }, []);
 
   return (
