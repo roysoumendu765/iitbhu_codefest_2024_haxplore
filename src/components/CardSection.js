@@ -8,8 +8,9 @@ import temple4 from './assests/rameshrwram.jpeg'
 
 function CardSection() {
   return (
-    <div className='row'>
-      <div className='col-12'>
+    <div className='row card-container'>
+   
+      <div className='col-12 main-card-container'>
         <div className='row py-3 my-3'>
           <div className='col-12 col-lg-6 my-3 d-flex justify-content-center justify-content-lg-center align-items-center'>
             <img className='img formContainer p-0 w-75' src={temple1} alt="designer" />
