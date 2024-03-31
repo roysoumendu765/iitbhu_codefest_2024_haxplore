@@ -151,15 +151,13 @@ router.post('/sendenquiry', async (req, res) => {
     }
 })
 
-router.post('/postcount', async (req, res) => {
+router.patch('/postcount/:idnum', async (req, res) => {
     try {
-        const UpdateNum = new IntegerModel({
-            field1: req.body.a,
-            field2: req.body.b,
-            field3: req.body.c,
-        })
-        const NumSaved = await UpdateNum.save();
-        res.status(200).json({message: 'Updated Successfully.'});
+        const id = req.params.idnum;
+        const updateData = req.body;
+        const options = {new: true};
+        const NumSaved = await IntegerModel.findOneAndUpdate({idnumber: id}, updateData, options);
+        res.status(200).json({data: NumSaved, message: 'Updated Successfully.'});
     } catch (error) {
         console.log(`Error: ${error}`);
         res.status(500).json({message: 'Server Error'});

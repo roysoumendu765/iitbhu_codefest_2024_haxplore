@@ -73,7 +73,7 @@ const AdminLogin=()=>{
                         <label className='label-text' htmlFor="password">Password</label><br/>
                         <input className='passwordInput' placeholder='Enter your Password' name='password' value={passwordval} onChange={handlePassword}/>
                         <br/>
-                        <h4 className='forgot-pwd'><a>Forgot Password?</a></h4>
+                        {/* <h4 className='forgot-pwd'><a>Forgot Password?</a></h4> */}
                         <button className='btn-signin' type="submit" onClick={handleSubmit}>Login</button>
                         <div className='google-btn'>
                                 <GoogleLogin

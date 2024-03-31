@@ -37,11 +37,11 @@ const DashBoard = (props) => {
 
   return (
     <>
-      <div>
+      <div className='dashboard-header d-flex justify-content-between px-4 mx-3 my-3'>
         <h2>Welcome Admin!</h2>
         <button className='btn btn-primary' onClick={onLogout}>Logout</button>
       </div>
-      <div className='container d-flex justify-content-center mt-2'>
+      <div className='container mt-2'>
         <table className="table">
           <thead>
             <tr>
@@ -54,8 +54,14 @@ const DashBoard = (props) => {
               <th scope="col">Status</th>
             </tr>
           </thead>
+          <tr>
+            <td colspan="8">
+            <div className='no-records'>
+              {listdetails.length === 0 && <p className='text-center'>No Records Present</p>}
+           </div>
+            </td>
+          </tr>
           <tbody>
-          {listdetails.length === 0 && <p className='no-records text-center'>No Records Present</p>}
           {listdetails.map((item) => (
             <tr key={item._id}>
               <td>{item.name}</td>
@@ -70,7 +76,7 @@ const DashBoard = (props) => {
 
           </tbody>
         </table>
-        <div className='btn-area d-flex justify-content-end'>
+        <div className='btn-area d-flex justify-content-center mb-3'>
           <button className='btn btn-primary mx-2' onClick={requestAll}>Get Details</button>
           <button className='btn btn-primary' onClick={clearAll}>Clear Details</button>
         </div>
