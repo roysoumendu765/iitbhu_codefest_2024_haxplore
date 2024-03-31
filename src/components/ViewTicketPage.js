@@ -49,7 +49,7 @@ const ViewTicketPage = () => {
                 // console.log(status);
                 // console.log(listStatus);
                 // return false;
-            }else{
+            } else {
                 console.log(status);
                 console.log(listStatus);
                 // return status;
@@ -60,7 +60,7 @@ const ViewTicketPage = () => {
         }
         return false;
     };
-    
+
     return (
         <div className="outerMost">
             <div className="containerV">
