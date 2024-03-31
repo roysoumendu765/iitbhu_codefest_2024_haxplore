@@ -15,7 +15,6 @@
 }
 .containerV {
     height: 15rem;
-    width: 40rem;
     /* border: 1px solid red; */
     display: flex;
     gap: 1rem;

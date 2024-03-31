@@ -58,10 +58,10 @@ const ViewTicketPage = () => {
     };
 
     return (
-        <div className="outerMost">
-            <div className="containerV formContainer my-5">
+        <div className="row outerMost">
+            <div className="col-10  col-md-5 col-lg-4 mx-auto containerV formContainer my-5">
                 <div className="inputContainerV ">
-                    <label htmlFor="" className="neumorphic-label me-5">ID Number: &nbsp;</label>
+                    <label htmlFor="" className="neumorphic-label me-5 text-center">ID Number: &nbsp;</label>
                     <input type="text" className="neumorphic-input" value={idNo} onChange={changeHandler} />
                 </div>
                 <div className="submitButton">

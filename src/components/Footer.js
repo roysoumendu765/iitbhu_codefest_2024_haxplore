@@ -78,18 +78,16 @@ const ContacUs=()=>{
         {/* Media Link Area */}
 
         <div className="col-12 col-sm-6 col-md-auto my-4 my-sm-0   box">
-          <h3 className="footer-sub-title footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">Media Links</h3>
+          <h3 className="footer-sub-title footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">Social Links</h3>
 
           <div className="media-sub-title-content">
 
-            <div className="footer-sub-title-media footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
-              <a href="#">Temple Services</a>
-            </div>
-
-            <div className="footer-sub-title-media ms-5 ps-3 ms-sm-0 ps-sm-0">
-            <Link to="Adminlogin" className="sendEnquiry   ms-sm-0 ps-sm-0 ">Admin Login</Link>
-
-            </div>
+          <div className="media-icon footer-sub-title-contact ms-5 ms-sm-0 ps-sm-0">
+            <span><a href="#" style={{color: 'black'}}><BsTwitterX /></a></span>
+            <span><a href="#" style={{color: '#1877F2'}}><FaFacebookF /></a></span>
+            <span><a href="#" style={{color: '#CD201F'}}><BsYoutube /></a></span>
+            <span><a href="#" style={{color: '#E4405F'}}><FaSquareInstagram /></a></span>
+          </div>
 
           </div>
         </div>
@@ -103,19 +101,7 @@ const ContacUs=()=>{
           <div className="policy-sub-title-content">
 
             <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
-              <a href="#"> How we Work</a>
-            </div>
-
-            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
               <a href="#"> Privacy Policy</a>
-            </div>
-
-            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
-              <a href="#"> Term of Use</a>
-            </div>
-
-            <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
-              <a href="#"> FAQ</a>
             </div>
 
             <div className="footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
@@ -137,13 +123,6 @@ const ContacUs=()=>{
           <div className="paymentcard footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
           <img src={paypal} alt="paypallogo" className="me-4"/>
             <img src={upi}  alt="upilogo" style={{'transform':'scale(0.8)'}} />
-          </div>
-
-          <div className="media-icon footer-sub-title-contact ms-5 ps-3 ms-sm-0 ps-sm-0">
-            <span><a href="#">< BsTwitterX /></a></span>
-            <span><a href="#"><FaFacebookF /></a></span>
-            <span><a href="#"><BsYoutube /></a></span>
-            <span><a href="#"><FaSquareInstagram /></a></span>
           </div>
         </div>
       </div>
