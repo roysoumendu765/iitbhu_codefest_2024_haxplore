@@ -5,10 +5,13 @@ import Swal from 'sweetalert2';
 import DashBoard from './DashBoard';
 import { FcGoogle } from "react-icons/fc";
 import { GoogleLogin } from 'react-google-login';
+import {useNavigate} from 'react-router-dom';
 
 const AdminLogin=()=>{
     const [username, setUsername] = useState('');
     const [passwordval, setPasswordval] = useState('');
+
+    const navigate = useNavigate();
 
     const responseGoogle = (response) => {
         axios.post('/auth/google', { token: response.tokenId })
